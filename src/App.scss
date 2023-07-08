@@ -1,0 +1,18 @@
+@import "./styles/variables/variables-dark";
+@import "./styles/fonts";
+
+body {
+  background: rgb(21, 29, 32);
+  background: linear-gradient(
+    90deg,
+    rgba(21, 29, 32, 1) 0%,
+    rgba(21, 29, 32, 1) 35%,
+    rgba(10, 14, 17, 1) 100%
+  );
+  // background-color: $background-dark1;
+  color: $font-base;
+  margin: 0;
+  padding: 0;
+  font-family: "Quattrocento Sans";
+  font-weight: 400;
+}

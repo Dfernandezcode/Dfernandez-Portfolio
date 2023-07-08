@@ -1,0 +1,37 @@
+@import "../../styles/variables/variables-dark";
+@import "../../styles/mixins.scss";
+@import "../../styles/fonts";
+
+.landing {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &__menu {
+    margin-left: clamp(4rem, 20vw, 48rem);
+
+    &--items {
+      color: $font-base;
+      font-size: clamp(3rem, 5vw, 8rem);
+
+      display: block;
+      text-decoration: none;
+      padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+
+      transition: opacity 400ms ease;
+    }
+  }
+}
+
+// Hover effects:
+
+.landing__menu:hover > .landing__menu--items {
+  opacity: 0.3;
+}
+
+.landing__menu:hover > .landing__menu--items:hover {
+  opacity: 1;
+}
+// menu
+// menu-items
+// menu-item

@@ -1,0 +1,43 @@
+@import "../../styles/variables/variables-dark";
+// @import "./styles/variables/variables-dark2";
+
+.nav {
+  &-list {
+    list-style-type: none;
+    color: $font-base;
+    font-size: 14px;
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+    gap: 36px;
+    padding: 36px 64px 0 0;
+
+    &__link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &__link:hover {
+      color: $font-header1;
+      cursor: pointer;
+    }
+
+    &__button {
+      color: $button-text;
+      text-decoration: none;
+      border: solid 1px $button-border;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    &__button:hover {
+      color: $button-text;
+      text-decoration: none;
+      border: solid 1px $button-border;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: $background-dark2;
+      color: $button-text-hover;
+    }
+  }
+}
