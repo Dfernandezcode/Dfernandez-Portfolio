@@ -1,5 +1,7 @@
-@import "./styles/variables/variables-dark";
-@import "./styles/fonts";
+@import "./utilities/fonts";
+@import "./utilities/variables";
+@import "./utilities/layout-mixins";
+@import "./utilities/responsive-mixins";
 
 body {
   background: rgb(21, 29, 32);
@@ -9,7 +11,6 @@ body {
     rgba(21, 29, 32, 1) 35%,
     rgba(10, 14, 17, 1) 100%
   );
-  // background-color: $background-dark1;
   color: $font-base;
   margin: 0;
   padding: 0;

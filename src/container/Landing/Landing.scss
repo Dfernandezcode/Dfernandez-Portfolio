@@ -1,6 +1,7 @@
-@import "../../styles/variables/variables-dark";
-@import "../../styles/mixins.scss";
-@import "../../styles/fonts";
+@import "../../utilities/variables";
+@import "../../utilities/variables";
+@import "../../utilities/layout-mixins";
+@import "../../utilities/responsive-mixins";
 
 .landing {
   height: 100vh;

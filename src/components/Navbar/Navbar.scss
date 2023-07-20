@@ -1,5 +1,7 @@
-@import "../../styles/variables/variables-dark";
-// @import "./styles/variables/variables-dark2";
+@import "../../utilities/fonts";
+@import "../../utilities/variables";
+@import "../../utilities/layout-mixins";
+@import "../../utilities/responsive-mixins";
 
 .nav {
   &-list {

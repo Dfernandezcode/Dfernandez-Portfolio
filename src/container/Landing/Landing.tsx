@@ -25,19 +25,3 @@ const Landing = () => {
 };
 
 export default Landing;
-
-{
-  /* <div className="landing">
-      <div className="landing-box">
-        <p className="landing-box__intro">Hey there! my name is</p>
-        <h1 className="landing-box__name">Daniel Fernandez.</h1>
-        <h1 className="landing-box__subtitle">I build web experiences.</h1>
-        <p className="landing-box__text">
-          I'm a front-end developer specializing in building (and occasionally
-          designing) exceptional digital experiences. At present, my primary
-          focus revolves around crafting accessible and human-centered products.{" "}
-        </p>
-        <a className="landing-box__link">Check out some of my work!</a>
-      </div>
-    </div> */
-}
