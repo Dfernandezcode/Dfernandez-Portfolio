@@ -1,17 +1,35 @@
 import "./Skills.scss";
-
-const Skills = () => {
+import icon_html5 from "../../assets/images/techstack-icons/icon_html5.svg";
+import icon_css from "../../assets/images/techstack-icons/icon_css.svg";
+import icon_JS from "../../assets/images/techstack-icons/icon_JS.svg";
+import icon_React from "../../assets/images/techstack-icons/Icon_React.svg";
+import icon_Sass from "../../assets/images/techstack-icons/icon_Sass.svg";
+import icon_ViteJS from "../../assets/images/techstack-icons/icon_ViteJS.svg";
+import icon_TS from "../../assets/images/techstack-icons/icon_TS.svg";
+import icon_NodeJS from "../../assets/images/techstack-icons/icon_NodeJS.svg";
+import icon_Postman from "../../assets/images/techstack-icons/icon_Postman.png";
+const Techstack = () => {
   return (
-    <div id="skills">
-      <h1>Skills</h1>.<p>HTML</p>
-      <p>CSS</p>
-      <p>Javascript</p>
-      <p>React</p>
-      <p>NodeJS</p>
-      <p>Typescript</p>
-      <p>Vite</p>
+    <div id="stack" className="techstack">
+      <h1 className="techstack__title">My Techstack</h1>
+      <div className="techstack__icons">
+        <img className="techstack__icons-logo" src={icon_html5} alt="HTML5" />
+        <img className="techstack__icons-logo" src={icon_css} alt="CSS" />
+        <img className="techstack__icons-logo" src={icon_JS} alt="JS3" />
+        <img className="techstack__icons-logo" src={icon_TS} alt="Typescript" />
+
+        <img className="techstack__icons-logo" src={icon_React} alt="React" />
+        <img className="techstack__icons-logo" src={icon_ViteJS} alt="ViteJS" />
+        <img className="techstack__icons-logo" src={icon_Sass} alt="Sass" />
+        <img className="techstack__icons-logo" src={icon_NodeJS} alt="NodeJS" />
+        <img
+          className="techstack__icons-logo"
+          src={icon_Postman}
+          alt="Postman"
+        />
+      </div>
     </div>
   );
 };
 
-export default Skills;
+export default Techstack;
