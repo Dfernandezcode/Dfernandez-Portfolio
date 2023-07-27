@@ -4,15 +4,25 @@
 @import "../../utilities/responsive-mixins";
 
 .nav {
+  position: fixed;
+  right: 0;
+  margin: 16px;
+  @include adaptTo("not-mobile") {
+    margin: 24px;
+  }
+
   &-list {
-    list-style-type: none;
-    color: $font-base;
-    font-size: 14px;
-    display: flex;
-    justify-content: end;
-    list-style-type: none;
-    gap: 36px;
-    padding: 36px 64px 0 0;
+    display: none;
+    @include adaptTo("not-mobile") {
+      display: flex;
+      list-style-type: none;
+      color: $font-base;
+      font-size: 14px;
+      display: flex;
+      justify-content: end;
+      list-style-type: none;
+      gap: clamp(3rem, 4vw, 5rem);
+    }
 
     &__link {
       color: inherit;
@@ -42,4 +52,25 @@
       color: $button-text-hover;
     }
   }
+}
+
+.hamburger-menu {
+  display: block;
+  @include adaptTo("not-mobile") {
+    display: none;
+  }
+}
+
+.mobile-open {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  list-style-type: none;
+  color: $font-base;
+  font-size: 14px;
+  display: flex;
+  justify-content: end;
+  list-style-type: none;
+  gap: clamp(2rem, 8vw, 4rem);
+  padding: 36px 64px 0 0;
 }

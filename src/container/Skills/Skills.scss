@@ -1,0 +1,42 @@
+@import "../../utilities/variables";
+@import "../../utilities/variables";
+@import "../../utilities/layout-mixins";
+@import "../../utilities/responsive-mixins";
+
+.techstack {
+  @include flex-center;
+  flex-direction: column;
+  margin: 3rem 1rem;
+
+  &__title {
+    text-align: center;
+    width: 100%;
+    font-size: clamp(2rem, 5vw, 8rem);
+    margin: 25px 0 25px 0;
+
+    @include adaptTo("not-mobile") {
+      font-size: clamp(3rem, 2vw, 6rem);
+    }
+  }
+
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    @include adaptTo("not-mobile") {
+      @include flex-center;
+      gap: 25px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    &-logo {
+      width: clamp(40px, 50px, 100px);
+      border: 1px white solid;
+      padding: 10px;
+      border-radius: 5px;
+      @include adaptTo("not-mobile") {
+        width: clamp(60px, 75px, 100px);
+      }
+    }
+  }
+}

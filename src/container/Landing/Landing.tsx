@@ -7,7 +7,7 @@ const Landing = () => {
         <a href="#about" className="landing__menu--items">
           About
         </a>
-        <a href="#skills" className="landing__menu--items">
+        <a href="#stack" className="landing__menu--items">
           Skills
         </a>
         <a href="#projects" className="landing__menu--items">
