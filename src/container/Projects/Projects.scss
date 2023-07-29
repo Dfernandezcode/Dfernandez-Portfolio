@@ -1,0 +1,43 @@
+@import "../../utilities/variables";
+@import "../../utilities/variables";
+@import "../../utilities/layout-mixins";
+@import "../../utilities/responsive-mixins";
+
+.projects {
+  &__header {
+    @include font-size-subheader;
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0 25px 0;
+  }
+
+  &__card {
+    &--title {
+      @include font-size-subheader;
+      font-weight: 700;
+      color: $font-main;
+    }
+    @include adaptTo("not-mobile") {
+      width: 80%;
+    }
+
+    &--text {
+      @include font-size-paragraph;
+      color: $font-secondary;
+      font-weight: 400;
+      margin: 12px 0;
+      line-height: 1.5rem;
+    }
+
+    &--link {
+      text-decoration: none;
+      color: $font-link;
+    }
+  }
+}

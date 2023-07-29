@@ -7,7 +7,7 @@ import icon_Sass from "../../assets/images/techstack-icons/icon_Sass.svg";
 import icon_ViteJS from "../../assets/images/techstack-icons/icon_ViteJS.svg";
 import icon_TS from "../../assets/images/techstack-icons/icon_TS.svg";
 import icon_NodeJS from "../../assets/images/techstack-icons/icon_NodeJS.svg";
-import icon_Postman from "../../assets/images/techstack-icons/icon_Postman.png";
+import icon_Postman from "../../assets/images/techstack-icons/icon_Postman.svg";
 import icon_Figma from "../../assets/images/techstack-icons/icon_Figma.svg";
 import icon_PS from "../../assets/images/techstack-icons/icon_PS.svg";
 import icon_Docker from "../../assets/images/techstack-icons/icon_Docker.svg";
@@ -15,7 +15,7 @@ import icon_Docker from "../../assets/images/techstack-icons/icon_Docker.svg";
 const Techstack = () => {
   return (
     <div id="stack" className="techstack">
-      <h1 className="techstack__title">Techstack</h1>
+      <h1 className="techstack__header">Techstack</h1>
       <div className="techstack__wrapper">
         <div className="techstack__icons">
           <img className="techstack__icons-logo" src={icon_html5} alt="HTML5" />

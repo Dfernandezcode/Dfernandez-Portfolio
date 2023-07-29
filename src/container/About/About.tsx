@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div id="about" className="about-card">
       <div className="about-card__wrapper">
-        <h1 className="about-card__title">About me</h1>
+        <h1 className="about-card__header">About me</h1>
         <p className="about-card__text">
           Back in 2016 when I decided to try learning about UIUX design and what
           made websites work at Ironhack Madrid.

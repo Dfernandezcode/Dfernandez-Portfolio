@@ -21,3 +21,7 @@
 @mixin font-size-paragraph {
   font-size: clamp(14px, 16px, 18px);
 }
+
+@mixin font-size-footer {
+  font-size: clamp(10px, 14px, 16px);
+}
