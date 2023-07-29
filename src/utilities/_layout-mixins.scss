@@ -9,3 +9,15 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin font-size-heading {
+  font-size: clamp(28px, 30px, 34px);
+}
+
+@mixin font-size-subheader {
+  font-size: clamp(16px, 18px, 22px);
+}
+
+@mixin font-size-paragraph {
+  font-size: clamp(14px, 16px, 18px);
+}

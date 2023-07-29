@@ -1,20 +1,10 @@
 import "./Navbar.scss";
-import { useState } from "react";
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prevState) => !prevState);
-  };
-
   return (
     <div>
       <nav className="nav">
-        <button className="hamburger-menu" onClick={toggleMobileMenu}>
-          ☰
-        </button>
-        <ul className={`nav-list ${isMobileMenuOpen ? "mobile-open" : ""}`}>
+        <ul className="nav-list">
           <li>
             <a href="#about" className="nav-list__link">
               About

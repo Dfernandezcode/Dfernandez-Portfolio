@@ -4,16 +4,17 @@
 @import "../../utilities/responsive-mixins";
 
 .techstack {
-  @include flex-center;
-  flex-direction: column;
-  margin: 3rem 1rem;
+  margin: 50px 0 50px 0;
+
+  &__wrapper {
+    @include flex-center;
+  }
 
   &__title {
-    text-align: center;
+    text-align: left;
     width: 100%;
-    font-size: clamp(2rem, 5vw, 8rem);
-    margin: 25px 0 25px 0;
-
+    margin: 0 0 25px 0;
+    @include font-size-subheader;
     @include adaptTo("not-mobile") {
       font-size: clamp(3rem, 2vw, 6rem);
     }
@@ -21,8 +22,8 @@
 
   &__icons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
     @include adaptTo("not-mobile") {
       @include flex-center;
       gap: 25px;
@@ -30,10 +31,7 @@
       width: 100%;
     }
     &-logo {
-      width: clamp(40px, 50px, 100px);
-      border: 1px white solid;
-      padding: 10px;
-      border-radius: 5px;
+      width: clamp(50px, 60px, 80px);
       @include adaptTo("not-mobile") {
         width: clamp(60px, 75px, 100px);
       }

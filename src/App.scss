@@ -4,16 +4,16 @@
 @import "./utilities/responsive-mixins";
 
 body {
-  background: rgb(21, 29, 32);
-  background: linear-gradient(
-    90deg,
-    rgba(21, 29, 32, 1) 0%,
-    rgba(21, 29, 32, 1) 35%,
-    rgba(10, 14, 17, 1) 100%
+  background: rgb(0, 16, 24);
+  background: radial-gradient(
+    circle,
+    rgba(0, 16, 24, 1) 0%,
+    rgba(0, 34, 51, 1) 100%
   );
-  color: $font-base;
+  color: $font-main;
   margin: 0;
   padding: 0;
   font-family: "Quattrocento Sans";
   font-weight: 400;
+  margin: 25px;
 }

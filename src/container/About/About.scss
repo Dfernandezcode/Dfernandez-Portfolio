@@ -7,24 +7,18 @@
   @include flex-center;
   flex-direction: column;
 
-  &__wrapper {
-    width: 70vw;
-    border: solid 2px $border-box1;
-    border-radius: 10px;
-    padding: 25px;
-  }
-
   &__title {
-    font-size: clamp(2rem, 5vw, 8rem);
-    text-align: center;
+    @include font-size-subheader;
+    text-align: left;
     @include adaptTo("not-mobile") {
-      font-size: clamp(3rem, 2vw, 6rem);
+      font-size: clamp(2rem, 2vw, 4rem);
     }
   }
 
   &__text {
-    font-size: clamp(1rem, 2vw, 4rem);
-    line-height: 2.5rem;
+    @include font-size-paragraph;
+    line-height: 1.5rem;
+    color: $font-secondary;
     @include adaptTo("not-mobile") {
       font-size: clamp(2rem, 1.5vw, 3rem);
     }

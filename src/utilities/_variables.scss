@@ -1,14 +1,13 @@
 // DARK PALETTE:
 // Background Colors
-$background-dark1: #0b0f12;
+$background-base: #090c16;
 $background-dark2: #b9ecff;
 
 // Font colors
-$font-header1: #b9ecff;
-$font-subtitle1: #ffffff;
-$font-subtitle2: #77b1bc;
-$font-base: #ffffff;
-$font-text-light: #b9ecff;
+$font-main: #d5e3eb;
+$font-secondary: #a0b2bb;
+$font-white: #fff;
+$font-black: #000;
 
 // Elements
 $button-background: #b9ecff;
@@ -18,3 +17,6 @@ $button-text-hover: #0b0f12;
 
 // Borders
 $border-box1: #b9ecff;
+
+//Icon Colors:
+$icon_light: #a0b2bb;
