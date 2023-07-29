@@ -10,11 +10,13 @@
     @include flex-center;
   }
 
-  &__title {
+  &__header {
     text-align: left;
     width: 100%;
     margin: 0 0 25px 0;
     @include font-size-subheader;
+    text-transform: uppercase;
+
     @include adaptTo("not-mobile") {
       font-size: clamp(3rem, 2vw, 6rem);
     }

@@ -7,8 +7,9 @@
   @include flex-center;
   flex-direction: column;
 
-  &__title {
+  &__header {
     @include font-size-subheader;
+    text-transform: uppercase;
     text-align: left;
     @include adaptTo("not-mobile") {
       font-size: clamp(2rem, 2vw, 4rem);

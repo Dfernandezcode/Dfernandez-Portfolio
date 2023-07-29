@@ -1,0 +1,17 @@
+@import "../../utilities/variables";
+@import "../../utilities/variables";
+@import "../../utilities/layout-mixins";
+@import "../../utilities/responsive-mixins";
+
+.footer {
+  margin: 75px 0;
+  padding: 25px 0;
+  border-bottom: solid 1px $font-main;
+  &__text {
+    @include font-size-footer;
+    color: $font-secondary;
+    font-weight: 400;
+    margin: 12px 0;
+    line-height: 1.5rem;
+  }
+}
