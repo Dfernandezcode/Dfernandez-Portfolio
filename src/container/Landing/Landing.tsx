@@ -9,8 +9,8 @@ const Landing = () => {
         <h1 className="landing__name">Daniel Fernandez</h1>
         <h2 className="landing__title">Web designer & developer</h2>
         <p className="landing__blurb">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia.
+          I build and design interactive and accessible websites and web
+          applications.
         </p>
         <div className="landing__social">
           <a

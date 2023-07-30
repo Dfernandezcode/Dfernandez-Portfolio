@@ -1,13 +1,6 @@
 import "./App.scss";
 import { Navbar } from "./components/index";
-import {
-  Landing,
-  Footer,
-  About,
-  Skills,
-  Experience,
-  Projects,
-} from "./container";
+import { Landing, Footer, About, Skills, Projects } from "./container";
 
 function App() {
   return (
@@ -17,7 +10,6 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      <Experience />
       <Footer />
     </div>
   );
