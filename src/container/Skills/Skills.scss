@@ -4,7 +4,7 @@
 @import "../../utilities/responsive-mixins";
 
 .techstack {
-  margin: 50px 0 50px 0;
+  margin: 50px 0;
 
   &__wrapper {
     @include flex-center;
@@ -25,15 +25,15 @@
   &__icons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 25px;
+    grid-gap: 20px;
+
     @include adaptTo("not-mobile") {
       @include flex-center;
-      gap: 25px;
       flex-wrap: wrap;
       width: 100%;
     }
     &-logo {
-      width: clamp(50px, 60px, 80px);
+      width: clamp(40px, 50px, 60px);
       @include adaptTo("not-mobile") {
         width: clamp(60px, 75px, 100px);
       }
