@@ -1,12 +1,15 @@
 import "./App.scss";
-import { Navbar } from "./components/index";
+import { Navbar, MouseFollower } from "./components/index";
 import { Landing, Footer, About, Skills, Projects } from "./container";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Landing />
+
+      <MouseFollower />
+      <Navbar />
+
       <About />
       <Skills />
       <Projects />
