@@ -1,14 +1,14 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import "./MouseFollower.scss";
 
 const MouseFollower = () => {
-  const blobRef = useRef(null);
+  const blobRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: { clientX: any; clientY: any }) => {
       const { clientX, clientY } = event;
 
-      blobRef.current.animate(
+      blobRef.current?.animate(
         {
           left: `${clientX}px`,
           top: `${clientY}px`,

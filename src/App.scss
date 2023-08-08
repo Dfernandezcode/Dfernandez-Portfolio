@@ -13,7 +13,14 @@ body {
   color: $font-main;
   margin: 0;
   padding: 0;
-  font-family: "Quattrocento Sans";
+  font-family: "Inter";
   font-weight: 400;
   margin: 25px;
+}
+
+.App {
+  @include adaptTo("not-mobile") {
+    @include flex-center;
+    flex-direction: column;
+  }
 }

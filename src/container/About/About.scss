@@ -6,13 +6,35 @@
 .about-card {
   @include flex-center;
   flex-direction: column;
+  @include adaptTo("not-mobile") {
+    position: relative;
+    background-color: rgb(16 16 16);
+    border: 1px solid rgb(255 255 255 / 5%);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    width: calc(100% - 20rem);
+  }
+
+  &__wrapper {
+    @include adaptTo("not-mobile") {
+      background-image: radial-gradient(
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px
+      );
+      background-position: 50% 50%;
+      background-size: 1.1rem 1.1rem;
+      padding: 4rem;
+      border-radius: 1.25rem;
+      overflow: hidden;
+    }
+  }
 
   &__header {
     @include font-size-subheader;
     text-transform: uppercase;
     text-align: left;
     @include adaptTo("not-mobile") {
-      font-size: clamp(2rem, 2vw, 4rem);
+      text-align: center;
     }
   }
 
@@ -21,7 +43,31 @@
     line-height: 1.5rem;
     color: $font-secondary;
     @include adaptTo("not-mobile") {
-      font-size: clamp(2rem, 1.5vw, 3rem);
+      line-height: 2.5rem;
     }
   }
+}
+
+.about-card::after {
+  content: "";
+  height: 70px;
+  width: 1px;
+  position: absolute;
+  left: -1px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(transparent, mediumslateblue, transparent);
+  opacity: 0;
+}
+
+.about-card::after {
+  top: 65%;
+  opacity: 0;
+}
+
+.about-card:hover::after {
+  top: 25%;
+  opacity: 1;
 }

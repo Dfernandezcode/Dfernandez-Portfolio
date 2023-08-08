@@ -19,6 +19,7 @@
 
     @include adaptTo("not-mobile") {
       font-size: clamp(3rem, 2vw, 6rem);
+      text-align: center;
     }
   }
 

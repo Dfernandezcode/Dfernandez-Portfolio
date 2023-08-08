@@ -6,10 +6,8 @@ function App() {
   return (
     <div className="App">
       <Landing />
-
       <MouseFollower />
       <Navbar />
-
       <About />
       <Skills />
       <Projects />
