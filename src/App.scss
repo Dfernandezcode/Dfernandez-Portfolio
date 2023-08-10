@@ -4,23 +4,60 @@
 @import "./utilities/responsive-mixins";
 
 body {
-  background: rgb(0, 16, 24);
-  background: radial-gradient(
-    circle,
-    rgba(0, 16, 24, 1) 0%,
-    rgba(0, 34, 51, 1) 100%
-  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-base;
   color: $font-main;
   margin: 0;
   padding: 0;
   font-family: "Inter";
   font-weight: 400;
-  margin: 25px;
+  overflow: hidden;
 }
 
 .App {
   @include adaptTo("not-mobile") {
-    @include flex-center;
-    flex-direction: column;
+    &__wrapper {
+      display: flex;
+      border: solid 1px $border-box1;
+      width: 95vw;
+      height: 90vh;
+      background-image: radial-gradient(
+        rgba(255, 255, 255, 0.2) 8%,
+        transparent 8%
+      );
+      background-position: 0% 0%;
+      background-size: 2vmin 2vmin;
+    }
+
+    &__left-side {
+      width: 40%;
+      overflow: hidden;
+    }
+  }
+
+  &__right-side {
+    flex: 1;
+    width: 60%;
   }
 }
+
+// &__wrapper {
+//   @include adaptTo("not-mobile") {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     background-image: radial-gradient(
+//       rgba(255, 255, 255, 0.1) 1px,
+//       transparent 1px
+//     );
+//     background-position: 50% 50%;
+//     background-size: 1.1rem 1.1rem;
+//     padding: 2rem;
+//     height: 100%;
+//     width: 100%;
+//   }
+// }

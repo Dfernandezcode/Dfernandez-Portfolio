@@ -6,33 +6,35 @@
 .landing {
   display: flex;
   align-items: flex-start;
-  margin: 0 0 100px 0;
+
+  @include adaptTo("not-mobile") {
+    margin: 0;
+    overflow: hidden;
+  }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    margin: 50px;
   }
 
   &__name {
     @include font-size-heading;
-    font-weight: 700;
+    font-weight: 300;
     color: $font-main;
+    @include adaptTo("not-mobile") {
+      @include font-size-heading;
+      margin: 0;
+    }
   }
 
   &__title {
     @include font-size-subheader;
-    font-weight: 400;
-    margin: 12px 0;
+    font-weight: 100;
     color: $font-main;
-  }
-
-  &__blurb {
-    @include font-size-paragraph;
-    font-weight: 400;
-    margin: 12px 0;
-    color: $font-secondary;
+    margin: 0;
   }
 
   &__social {

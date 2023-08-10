@@ -7,11 +7,7 @@ const Landing = () => {
     <div className="landing">
       <div className="landing__wrapper">
         <h1 className="landing__name">Daniel Fernandez</h1>
-        <h2 className="landing__title">Web designer & developer</h2>
-        <p className="landing__blurb">
-          I build and design interactive and accessible websites and web
-          applications.
-        </p>
+        <h2 className="landing__title">Designer & Developer</h2>
         <div className="landing__social">
           <a
             href="https://github.com/Dfernandezcode"

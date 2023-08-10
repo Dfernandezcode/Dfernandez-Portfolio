@@ -15,8 +15,8 @@ import icon_Docker from "../../assets/images/techstack-icons/icon_Docker.svg";
 const Techstack = () => {
   return (
     <div id="stack" className="techstack">
-      <h1 className="techstack__header">Techstack</h1>
       <div className="techstack__wrapper">
+        <h1 className="techstack__header">Techstack</h1>
         <div className="techstack__icons">
           <img className="techstack__icons-logo" src={icon_html5} alt="HTML5" />
           <img className="techstack__icons-logo" src={icon_css} alt="CSS" />
@@ -56,6 +56,12 @@ const Techstack = () => {
             alt="Docker"
           />
         </div>
+      </div>
+      <div className="techstack__wrapper">
+        <h1 className="techstack__header">Languages</h1>
+        <p className="languages__text">English</p>
+        <p className="languages__text">Spanish</p>
+        <p className="languages__text">Indonesian</p>
       </div>
     </div>
   );

@@ -5,21 +5,32 @@
 
 .techstack {
   margin: 50px 0;
+  @include adaptTo("not-mobile") {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin: 50;
+    height: 100%;
+  }
 
   &__wrapper {
     @include flex-center;
+    @include adaptTo("not-mobile") {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__header {
     text-align: left;
-    width: 100%;
-    margin: 0 0 25px 0;
+    margin: 50px 0 25px 0;
     @include font-size-subheader;
     text-transform: uppercase;
-
     @include adaptTo("not-mobile") {
-      font-size: clamp(3rem, 2vw, 6rem);
-      text-align: center;
+      text-align: left;
+      width: 100%;
     }
   }
 
@@ -27,17 +38,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-
     @include adaptTo("not-mobile") {
-      @include flex-center;
-      flex-wrap: wrap;
-      width: 100%;
+      grid-template-columns: repeat(6, 2fr);
+      grid-gap: 10px;
     }
+
     &-logo {
       width: clamp(40px, 50px, 60px);
-      @include adaptTo("not-mobile") {
-        width: clamp(60px, 75px, 100px);
-      }
     }
   }
 }

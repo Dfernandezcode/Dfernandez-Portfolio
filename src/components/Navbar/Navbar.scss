@@ -5,4 +5,25 @@
 
 .nav {
   display: none;
+  @include adaptTo("not-mobile") {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    text-align: left;
+    color: white;
+    padding: 10px 0 0 50px;
+
+    &__link {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }

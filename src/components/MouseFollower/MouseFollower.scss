@@ -20,18 +20,19 @@
     @include adaptTo("not-mobile") {
       display: block;
       background-color: white;
-      height: 34vmax;
+      height: 12rem;
       aspect-ratio: 1;
       position: absolute;
       left: 50%;
       top: 50%;
       translate: -50% -50%;
       border-radius: 50%;
-      background: linear-gradient(to right, aquamarine, mediumpurple);
+      background: linear-gradient(to right, #ffffff, #c6fc2b);
       animation: rotate 20s infinite;
-      opacity: 0.8;
+      opacity: 0.5;
       z-index: -2;
       backdrop-filter: blur(12vmax);
+      overflow: hidden;
     }
   }
 
@@ -39,13 +40,13 @@
     display: none;
     @include adaptTo("not-mobile") {
       display: block;
-      height: 100%;
-      width: 100%;
-      position: fixed;
+      position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
+      height: 100vh;
+      width: 100vw;
       z-index: -1;
-      backdrop-filter: blur(12vmax);
+      backdrop-filter: blur(8vmax);
     }
   }
 }
