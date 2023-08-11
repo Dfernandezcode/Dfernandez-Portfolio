@@ -1,0 +1,20 @@
+@mixin spriteEffect {
+  &::after {
+    content: "";
+    height: 70px;
+    width: 1px;
+    position: absolute;
+    left: -40px;
+    top: 65%;
+    transition: top, opacity;
+    transition-duration: 600ms;
+    transition-timing-function: ease;
+    background: linear-gradient(transparent, $border-sprite, transparent);
+    opacity: 0;
+  }
+
+  &:hover::after {
+    top: 40%;
+    opacity: 1;
+  }
+}

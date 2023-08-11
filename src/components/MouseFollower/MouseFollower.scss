@@ -1,4 +1,5 @@
 @import "../../utilities/responsive-mixins";
+@import "../../utilities/variables";
 
 @keyframes rotate {
   from {
@@ -27,7 +28,7 @@
       top: 50%;
       translate: -50% -50%;
       border-radius: 50%;
-      background: linear-gradient(to right, #ffffff, #c6fc2b);
+      background: linear-gradient(to right, $mouse-sprite1, $mouse-sprite2);
       animation: rotate 20s infinite;
       opacity: 0.5;
       z-index: -2;

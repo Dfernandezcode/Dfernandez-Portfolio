@@ -4,7 +4,7 @@ const Project_TaskManager = () => {
   return (
     <div className="projects__card">
       <h3 className="projects__card--title">
-        Task manager built with Javascript
+        Task manager built with Javascript ↗
       </h3>
       <p className="projects__card--text">
         A taskmanager app built with simple javascript, HTML and CSS. Task

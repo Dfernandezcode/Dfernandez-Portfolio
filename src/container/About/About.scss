@@ -2,24 +2,22 @@
 @import "../../utilities/variables";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/responsive-mixins";
+@import "../../utilities/effect-mixins";
 
 .about-card {
   @include flex-center;
   flex-direction: column;
   @include adaptTo("not-mobile") {
-    position: relative;
-    width: 95%;
+    justify-content: flex-start;
+    margin-top: 50px;
     height: 100%;
+    width: 80%;
   }
 
   &__header {
     @include font-size-subheader;
     text-transform: uppercase;
     text-align: left;
-    @include adaptTo("not-mobile") {
-      text-align: right;
-      width: 70%;
-    }
   }
 
   &__text {
@@ -28,32 +26,9 @@
     color: $font-secondary;
     @include adaptTo("not-mobile") {
       line-height: 2.5rem;
-      margin: 0 50px 0 50px;
-      width: 70%;
+      width: 80%;
     }
   }
-}
 
-.about-card::after {
-  content: "";
-  height: 70px;
-  width: 1px;
-  position: absolute;
-  left: -1px;
-  top: 65%;
-  transition: top, opacity;
-  transition-duration: 600ms;
-  transition-timing-function: ease;
-  background: linear-gradient(transparent, $border-sprite, transparent);
-  opacity: 0;
-}
-
-.about-card::after {
-  top: 65%;
-  opacity: 0;
-}
-
-.about-card:hover::after {
-  top: 40%;
-  opacity: 1;
+  @include spriteEffect;
 }

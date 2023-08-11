@@ -14,54 +14,34 @@ import icon_Docker from "../../assets/images/techstack-icons/icon_Docker.svg";
 
 const Techstack = () => {
   return (
-    <div id="stack" className="techstack">
-      <div className="techstack__wrapper">
-        <h1 className="techstack__header">Techstack</h1>
-        <div className="techstack__icons">
-          <img className="techstack__icons-logo" src={icon_html5} alt="HTML5" />
-          <img className="techstack__icons-logo" src={icon_css} alt="CSS" />
-          <img className="techstack__icons-logo" src={icon_JS} alt="JS3" />
-          <img
-            className="techstack__icons-logo"
-            src={icon_TS}
-            alt="Typescript"
-          />
+    <div id="stack" className="skills">
+      <div className="skills__wrapper">
+        <h1 className="skills__header">Techstack</h1>
+        <div className="skills__icons">
+          <img className="skills__icons-logo" src={icon_html5} alt="HTML5" />
+          <img className="skills__icons-logo" src={icon_css} alt="CSS" />
+          <img className="skills__icons-logo" src={icon_JS} alt="JS3" />
+          <img className="skills__icons-logo" src={icon_TS} alt="Typescript" />
 
-          <img className="techstack__icons-logo" src={icon_React} alt="React" />
+          <img className="skills__icons-logo" src={icon_React} alt="React" />
+          <img className="skills__icons-logo" src={icon_ViteJS} alt="ViteJS" />
+          <img className="skills__icons-logo" src={icon_Sass} alt="Sass" />
+          <img className="skills__icons-logo" src={icon_NodeJS} alt="NodeJS" />
           <img
-            className="techstack__icons-logo"
-            src={icon_ViteJS}
-            alt="ViteJS"
-          />
-          <img className="techstack__icons-logo" src={icon_Sass} alt="Sass" />
-          <img
-            className="techstack__icons-logo"
-            src={icon_NodeJS}
-            alt="NodeJS"
-          />
-          <img
-            className="techstack__icons-logo"
+            className="skills__icons-logo"
             src={icon_Postman}
             alt="Postman"
           />
-          <img className="techstack__icons-logo" src={icon_Figma} alt="Figma" />
-          <img
-            className="techstack__icons-logo"
-            src={icon_PS}
-            alt="Photoshop"
-          />
-          <img
-            className="techstack__icons-logo"
-            src={icon_Docker}
-            alt="Docker"
-          />
+          <img className="skills__icons-logo" src={icon_Figma} alt="Figma" />
+          <img className="skills__icons-logo" src={icon_PS} alt="Photoshop" />
+          <img className="skills__icons-logo" src={icon_Docker} alt="Docker" />
         </div>
       </div>
-      <div className="techstack__wrapper">
-        <h1 className="techstack__header">Languages</h1>
-        <p className="languages__text">English</p>
-        <p className="languages__text">Spanish</p>
-        <p className="languages__text">Indonesian</p>
+      <div className="skills__wrapper">
+        <h1 className="skills__header">Languages</h1>
+        <p className="skills__languages">English</p>
+        <p className="skills__languages">Spanish</p>
+        <p className="skills__languages">Indonesian</p>
       </div>
     </div>
   );

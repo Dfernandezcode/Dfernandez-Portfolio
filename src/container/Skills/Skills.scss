@@ -2,16 +2,14 @@
 @import "../../utilities/variables";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/responsive-mixins";
+@import "../../utilities/effect-mixins";
 
-.techstack {
-  margin: 50px 0;
+.skills {
   @include adaptTo("not-mobile") {
     display: flex;
     justify-content: flex-start;
+    margin-top: 50px;
     flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    margin: 50;
     height: 100%;
   }
 
@@ -25,7 +23,6 @@
 
   &__header {
     text-align: left;
-    margin: 50px 0 25px 0;
     @include font-size-subheader;
     text-transform: uppercase;
     @include adaptTo("not-mobile") {
@@ -46,5 +43,14 @@
     &-logo {
       width: clamp(40px, 50px, 60px);
     }
+
+    @include spriteEffect;
+  }
+
+  &__languages {
+    margin: 10px 0;
+    color: $font-secondary;
+
+    @include spriteEffect;
   }
 }

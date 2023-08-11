@@ -34,30 +34,23 @@ body {
     }
 
     &__left-side {
-      width: 40%;
+      width: 30%;
       overflow: hidden;
     }
   }
 
   &__right-side {
+    position: relative;
     flex: 1;
-    width: 60%;
+    width: 70%;
+    height: 90vh;
   }
 }
 
-// &__wrapper {
-//   @include adaptTo("not-mobile") {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     background-image: radial-gradient(
-//       rgba(255, 255, 255, 0.1) 1px,
-//       transparent 1px
-//     );
-//     background-position: 50% 50%;
-//     background-size: 1.1rem 1.1rem;
-//     padding: 2rem;
-//     height: 100%;
-//     width: 100%;
-//   }
-// }
+.card-motion-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: 90%;
+}
