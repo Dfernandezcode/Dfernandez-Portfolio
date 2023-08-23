@@ -9,7 +9,7 @@ function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="form-email">
       <label className="form-email__address" htmlFor="email">
-        Email Address
+        Email Address:
       </label>
       <input
         className="form-email__input"
