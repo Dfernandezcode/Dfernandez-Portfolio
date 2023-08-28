@@ -2,8 +2,8 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <div>
-      <p>Designed & Built by Daniel Fernandez</p>.
+    <div className="footer">
+      <p className="footer__text">©2023 Daniel Fernandez Foe</p>
     </div>
   );
 };

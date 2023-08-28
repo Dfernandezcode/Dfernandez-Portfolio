@@ -1,0 +1,21 @@
+@import "../../utilities/fonts";
+@import "../../utilities/variables";
+@import "../../utilities/layout-mixins";
+@import "../../utilities/responsive-mixins";
+@import "../../utilities/effect-mixins";
+
+.contact-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px;
+  flex-direction: column;
+  height: 100%;
+
+  &__header {
+    @include font-size-subheader;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  @include spriteEffect;
+}

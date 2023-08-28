@@ -2,41 +2,55 @@
 @import "../../utilities/variables";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/responsive-mixins";
+@import "../../utilities/effect-mixins";
 
-.techstack {
-  @include flex-center;
-  flex-direction: column;
-  margin: 3rem 1rem;
+.skills {
+  @include adaptTo("not-mobile") {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+    flex-direction: column;
+    height: 100%;
+  }
 
-  &__title {
-    text-align: center;
-    width: 100%;
-    font-size: clamp(2rem, 5vw, 8rem);
-    margin: 25px 0 25px 0;
-
+  &__wrapper {
+    @include flex-center;
     @include adaptTo("not-mobile") {
-      font-size: clamp(3rem, 2vw, 6rem);
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__header {
+    text-align: left;
+    @include font-size-subheader;
+    text-transform: uppercase;
+    @include adaptTo("not-mobile") {
+      text-align: left;
+      width: 100%;
     }
   }
 
   &__icons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
     @include adaptTo("not-mobile") {
-      @include flex-center;
-      gap: 25px;
-      flex-wrap: wrap;
-      width: 100%;
+      grid-template-columns: repeat(6, 2fr);
+      grid-gap: 10px;
     }
+
     &-logo {
-      width: clamp(40px, 50px, 100px);
-      border: 1px white solid;
-      padding: 10px;
-      border-radius: 5px;
-      @include adaptTo("not-mobile") {
-        width: clamp(60px, 75px, 100px);
-      }
+      width: clamp(40px, 50px, 60px);
     }
+
+    @include spriteEffect;
+  }
+
+  &__languages {
+    margin: 10px 0;
+    color: $font-secondary;
+
+    @include spriteEffect;
   }
 }

@@ -2,31 +2,33 @@
 @import "../../utilities/variables";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/responsive-mixins";
+@import "../../utilities/effect-mixins";
 
 .about-card {
   @include flex-center;
   flex-direction: column;
-
-  &__wrapper {
-    width: 70vw;
-    border: solid 2px $border-box1;
-    border-radius: 10px;
-    padding: 25px;
+  @include adaptTo("not-mobile") {
+    justify-content: flex-start;
+    margin-top: 50px;
+    height: 100%;
+    width: 80%;
   }
 
-  &__title {
-    font-size: clamp(2rem, 5vw, 8rem);
-    text-align: center;
-    @include adaptTo("not-mobile") {
-      font-size: clamp(3rem, 2vw, 6rem);
-    }
+  &__header {
+    @include font-size-subheader;
+    text-transform: uppercase;
+    text-align: left;
   }
 
   &__text {
-    font-size: clamp(1rem, 2vw, 4rem);
-    line-height: 2.5rem;
+    @include font-size-paragraph;
+    line-height: 1.5rem;
+    color: $font-secondary;
     @include adaptTo("not-mobile") {
-      font-size: clamp(2rem, 1.5vw, 3rem);
+      line-height: 2.5rem;
+      width: 80%;
     }
   }
+
+  @include spriteEffect;
 }

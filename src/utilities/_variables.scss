@@ -1,20 +1,19 @@
 // DARK PALETTE:
 // Background Colors
-$background-dark1: #0b0f12;
-$background-dark2: #b9ecff;
-
+$background-base: #0a0a0a;
+$background-secondary: #1e1e1e;
 // Font colors
-$font-header1: #b9ecff;
-$font-subtitle1: #ffffff;
-$font-subtitle2: #77b1bc;
-$font-base: #ffffff;
-$font-text-light: #b9ecff;
+$font-main: #eeeeee;
+$font-secondary: #eeeeee;
+$font-link: #bfffc7;
 
 // Elements
-$button-background: #b9ecff;
-$button-border: #b9ecff;
-$button-text: #b9ecff;
-$button-text-hover: #0b0f12;
 
-// Borders
-$border-box1: #b9ecff;
+// Borders & Effects
+$border-box1: #eeeeee;
+$border-sprite: #bfffc7;
+$mouse-sprite1: #18a5a7;
+$mouse-sprite2: #bfffc7;
+
+//Icon Colors:
+$icon_light: #a0b2bb;

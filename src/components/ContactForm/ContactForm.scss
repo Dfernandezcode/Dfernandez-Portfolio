@@ -1,0 +1,48 @@
+@import "../../utilities/fonts";
+@import "../../utilities/variables";
+@import "../../utilities/layout-mixins";
+@import "../../utilities/responsive-mixins";
+
+.form-email {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+  &__address {
+    font-size: 16px;
+    font-weight: 400;
+    color: $font-main;
+    margin: 0 0 10px 0;
+  }
+
+  &__input {
+    height: 16px;
+    width: 50%;
+    background-color: $background-secondary;
+    border: none;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    color: $font-main;
+    font-size: 14px;
+  }
+
+  &__textarea {
+    height: 250px;
+    width: 50%;
+    background-color: $background-secondary;
+    border: none;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    color: $font-main;
+    font-size: 14px;
+  }
+  &__submit {
+    border: none;
+    background-color: $background-secondary;
+    color: $font-main;
+    width: 10%;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

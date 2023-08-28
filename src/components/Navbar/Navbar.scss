@@ -4,73 +4,26 @@
 @import "../../utilities/responsive-mixins";
 
 .nav {
-  position: fixed;
-  right: 0;
-  margin: 16px;
+  display: none;
   @include adaptTo("not-mobile") {
-    margin: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
   }
 
   &-list {
-    display: none;
-    @include adaptTo("not-mobile") {
-      display: flex;
-      list-style-type: none;
-      color: $font-base;
-      font-size: 14px;
-      display: flex;
-      justify-content: end;
-      list-style-type: none;
-      gap: clamp(3rem, 4vw, 5rem);
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    text-align: left;
+    color: white;
+    padding: 10px 0 0 50px;
 
     &__link {
-      color: inherit;
+      color: white;
       text-decoration: none;
-    }
-
-    &__link:hover {
-      color: $font-header1;
-      cursor: pointer;
-    }
-
-    &__button {
-      color: $button-text;
-      text-decoration: none;
-      border: solid 1px $button-border;
-      padding: 8px;
-      border-radius: 5px;
-    }
-
-    &__button:hover {
-      color: $button-text;
-      text-decoration: none;
-      border: solid 1px $button-border;
-      padding: 8px;
-      border-radius: 5px;
-      background-color: $background-dark2;
-      color: $button-text-hover;
     }
   }
-}
-
-.hamburger-menu {
-  display: block;
-  @include adaptTo("not-mobile") {
-    display: none;
-  }
-}
-
-.mobile-open {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  list-style-type: none;
-  color: $font-base;
-  font-size: 14px;
-  display: flex;
-  justify-content: end;
-  list-style-type: none;
-  gap: clamp(2rem, 8vw, 4rem);
-  padding: 36px 64px 0 0;
 }

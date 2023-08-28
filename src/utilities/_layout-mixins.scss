@@ -1,4 +1,3 @@
-// Flexbox centering.
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -8,4 +7,26 @@
 @mixin no-margin-padding {
   margin: 0;
   padding: 0;
+}
+
+@mixin font-size-heading {
+  font-size: clamp(28px, 30px, 34px);
+  @include adaptTo("not-mobile") {
+    font-size: clamp(40px, 50px, 60px);
+  }
+}
+
+@mixin font-size-subheader {
+  font-size: clamp(16px, 18px, 22px);
+  @include adaptTo("not-mobile") {
+    font-size: clamp(18px, 22px, 24px);
+  }
+}
+
+@mixin font-size-paragraph {
+  font-size: clamp(14px, 16px, 18px);
+}
+
+@mixin font-size-footer {
+  font-size: clamp(10px, 14px, 16px);
 }

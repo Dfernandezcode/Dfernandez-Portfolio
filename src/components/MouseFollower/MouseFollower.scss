@@ -1,0 +1,53 @@
+@import "../../utilities/responsive-mixins";
+@import "../../utilities/variables";
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+.mouse {
+  &__blob {
+    display: none;
+    @include adaptTo("not-mobile") {
+      display: block;
+      background-color: white;
+      height: 12rem;
+      aspect-ratio: 1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+      border-radius: 50%;
+      background: linear-gradient(to right, $mouse-sprite1, $mouse-sprite2);
+      animation: rotate 20s infinite;
+      opacity: 0.5;
+      z-index: -2;
+      backdrop-filter: blur(12vmax);
+      overflow: hidden;
+    }
+  }
+
+  &__blur-effect {
+    display: none;
+    @include adaptTo("not-mobile") {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: -1;
+      backdrop-filter: blur(8vmax);
+    }
+  }
+}

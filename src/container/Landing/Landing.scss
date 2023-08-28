@@ -4,35 +4,47 @@
 @import "../../utilities/responsive-mixins";
 
 .landing {
-  height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
-  &__menu {
-    margin-left: clamp(4rem, 20vw, 48rem);
+  @include adaptTo("not-mobile") {
+    margin: 0;
+    overflow: hidden;
+  }
 
-    &--items {
-      color: $font-base;
-      font-size: clamp(4rem, 6vw, 10rem);
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 50px;
+  }
 
-      display: block;
-      text-decoration: none;
-      padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+  &__name {
+    @include font-size-heading;
+    font-weight: 300;
+    color: $font-main;
+    @include adaptTo("not-mobile") {
+      @include font-size-heading;
+      margin: 0;
+    }
+  }
 
-      transition: opacity 400ms ease;
+  &__title {
+    @include font-size-subheader;
+    font-weight: 100;
+    color: $font-main;
+    margin: 0;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-start;
+
+    &-icon {
+      width: 30px;
+      color: $icon_light;
+      margin: 12px 12px 0 0;
     }
   }
 }
-
-// Hover effects:
-
-.landing__menu:hover > .landing__menu--items {
-  opacity: 0.3;
-}
-
-.landing__menu:hover > .landing__menu--items:hover {
-  opacity: 1;
-}
-// menu
-// menu-items
-// menu-item
