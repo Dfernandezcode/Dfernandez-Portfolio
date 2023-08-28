@@ -30,4 +30,5 @@ jobs:
           echo "${{ secrets.HOSTINGER_DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -p 65002 154.49.245.118 >> ~/.ssh/known_hosts
-          scp -P 65002 -r dist/ u587430202@154.49.245.118:path/to/destination/
+          scp -P 65002 -r dist/ u587430202@154.49.245.118:public_html/
+
