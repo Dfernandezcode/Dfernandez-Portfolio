@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.scss";
 import { Navbar, MouseFollower } from "./components/index";
 import { Landing, Footer, About, Skills, Projects, Contact } from "./container";
