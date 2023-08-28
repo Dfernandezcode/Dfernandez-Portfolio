@@ -24,13 +24,20 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to Hostinger
+      - name: Debug Deploy to Hostinger
         run: |
           set -x
           mkdir -p ~/.ssh
+          echo $?
           echo "Listing SSH directory"
           ls -al ~/.ssh
+          echo $?
           echo "${{ secrets.HOSTINGER_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          echo $?
           chmod 600 ~/.ssh/id_rsa
+          echo $?
           ssh-keyscan -H dfernandezfoe.com >> ~/.ssh/known_hosts
+          echo $?
           scp -r dist/ dfernandezcode@gmail.com@dfernandezfoe.com:public_html/
+          echo $?
+
