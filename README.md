@@ -1,6 +1,6 @@
 # Dfernandez-Portfolio
 
-Personal portfolio code. See readme for further information and ntoes.
+Personal portfolio code.
 
 # Dfernandez-Portfolio_V1.0
 
@@ -24,5 +24,4 @@ Colors /DARK MODE/ --default
 
 ---
 
-    -Fonts pairings: Quattrocento 400 & 700 - serif
-    -Quattrocento Sans 400 & 700 - sans-serif
+    -Font used: Inter
