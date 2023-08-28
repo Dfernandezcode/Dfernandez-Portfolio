@@ -41,3 +41,4 @@ jobs:
           scp -r dist/ dfernandezcode@gmail.com@dfernandezfoe.com:public_html/
           echo $?
 
+
