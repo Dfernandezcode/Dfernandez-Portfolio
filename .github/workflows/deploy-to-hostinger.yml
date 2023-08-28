@@ -1,28 +1,34 @@
-name: Build and Deploy to Hostinger
+name: Deploy to Hostinger
 
 on:
   push:
     branches:
-      - default
-  build:
+      - main  # Replace with your branch name, if not 'main'
+
+jobs:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
-    - name: Use Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18.17.1'
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.17.1'
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Build
-      run: npm run build
-      
-    - name: Deploy to Hostinger
-      run: |
-        # Add your Hostinger deployment script or commands here
-        # This could be FTP/SFTP commands or API calls to Hostinger
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Hostinger
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HOSTINGER_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H your_hostinger_domain.com >> ~/.ssh/known_hosts  # Replace with your Hostinger domain
+          scp -r dist/ username@your_hostinger_domain.com:/path/to/deploy  # Replace with your Hostinger username and path
+        env:
+          HOSTINGER_DEPLOY_KEY: ${{ secrets.HOSTINGER_DEPLOY_KEY }}
