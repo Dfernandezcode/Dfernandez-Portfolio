@@ -1,16 +1,10 @@
-- name: Deploy to Hostinger
-  run: |
-    set -x  # This will print each command before it's executed
-    mkdir -p ~/.ssh
-    echo "${{ secrets.HOSTINGER_DEPLOY_KEY }}" > ~/.ssh/id_rsa
-    chmod 600 ~/.ssh/id_rsa
-    ssh-keyscan -H dfernandezfoe.com >> ~/.ssh/known_hosts
-    scp -r dist/ dfernandezcode@gmail.com@dfernandezfoe.com:public_html/
-  env: HOSTINGER_DEPLOY_KEY: ${{ secrets.HOSTINGER_DEPLOY_KEY }}
+name: Deploy to Hostinger
+
 on:
   push:
     branches:
-      - develop
+      - main  # Replace with your branch name, if not 'main'
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
