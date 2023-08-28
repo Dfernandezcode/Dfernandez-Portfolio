@@ -1,4 +1,4 @@
-- name: Deploy to Hostinger
+name: Deploy to Hostinger
   run: |
     set -x
     mkdir -p ~/.ssh
@@ -12,7 +12,7 @@
 on:
   push:
     branches:
-      - main  # Replace with your branch name, if not 'main'
+      - development
 
 jobs:
   deploy:
