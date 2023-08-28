@@ -3,8 +3,7 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - main  # Replace with your branch name, if not 'main'
-
+      - develop
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -15,7 +14,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Replace with your Node.js version
+          node-version: '18.17.1'
 
       - name: Install Dependencies
         run: npm install
