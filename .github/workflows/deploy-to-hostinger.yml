@@ -1,5 +1,14 @@
-name: Deploy to Hostinger
-
+- name: Deploy to Hostinger
+  run: |
+    set -x
+    mkdir -p ~/.ssh
+    echo "Listing SSH directory"
+    ls -al ~/.ssh
+    echo "${{ secrets.HOSTINGER_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+    chmod 600 ~/.ssh/id_rsa
+    ssh-keyscan -H dfernandezfoe.com >> ~/.ssh/known_hosts
+    scp -r dist/ dfernandezcode@gmail.com@dfernandezfoe.com:public_html/
+    
 on:
   push:
     branches:
