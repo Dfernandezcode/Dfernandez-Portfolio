@@ -28,7 +28,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.HOSTINGER_DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H your_hostinger_domain.com >> ~/.ssh/known_hosts  # Replace with your Hostinger domain
-          scp -r dist/ username@your_hostinger_domain.com:/path/to/deploy  # Replace with your Hostinger username and path
+          ssh-keyscan -H dfernandezfoe.com >> ~/.ssh/known_hosts
+          scp -r dist/ dfernandezcode@gmail.com@dfernandezfoe.com:public_html/
         env:
           HOSTINGER_DEPLOY_KEY: ${{ secrets.HOSTINGER_DEPLOY_KEY }}
