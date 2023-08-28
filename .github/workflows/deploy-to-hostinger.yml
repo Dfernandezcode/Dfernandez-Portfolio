@@ -16,7 +16,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '18.17.1'
 
       - name: Install Dependencies
         run: npm install
@@ -24,21 +24,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Debug Deploy to Hostinger
+      - name: Deploy to Hostinger
         run: |
-          set -x
           mkdir -p ~/.ssh
-          echo $?
-          echo "Listing SSH directory"
-          ls -al ~/.ssh
-          echo $?
           echo "${{ secrets.HOSTINGER_DEPLOY_KEY }}" > ~/.ssh/id_rsa
-          echo $?
           chmod 600 ~/.ssh/id_rsa
-          echo $?
-          ssh-keyscan -H dfernandezfoe.com >> ~/.ssh/known_hosts
-          echo $?
-          scp -r dist/ dfernandezcode@gmail.com@dfernandezfoe.com:public_html/
-          echo $?
-
-
+          ssh-keyscan -p 65002 154.49.245.118 >> ~/.ssh/known_hosts
+          scp -P 65002 -r dist/ u587430202@154.49.245.118:path/to/destination/
