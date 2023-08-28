@@ -6,8 +6,7 @@
     chmod 600 ~/.ssh/id_rsa
     ssh-keyscan -H dfernandezfoe.com >> ~/.ssh/known_hosts
     scp -r dist/ dfernandezcode@gmail.com@dfernandezfoe.com:public_html/
-  env:
-    HOSTINGER_DEPLOY_KEY: ${{ secrets.HOSTINGER_DEPLOY_KEY }}
+  env: HOSTINGER_DEPLOY_KEY: ${{ secrets.HOSTINGER_DEPLOY_KEY }}
 on:
   push:
     branches:
