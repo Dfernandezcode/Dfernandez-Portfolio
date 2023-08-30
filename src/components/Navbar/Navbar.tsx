@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ setActiveCard }) => {
                 setSelectedLink("skills");
               }}
             >
-              {selectedLink === "skills" ? "•" : "Skills"}
+              {selectedLink === "skills" ? "•" : "Skills & Experience"}
             </a>
           </li>
           <li>
@@ -58,11 +58,6 @@ const Navbar: React.FC<NavbarProps> = ({ setActiveCard }) => {
               }}
             >
               {selectedLink === "contact" ? "•" : "Contact"}
-            </a>
-          </li>
-          <li>
-            <a href="#resume" className="nav-list__button">
-              Resume
             </a>
           </li>
         </ul>

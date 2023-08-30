@@ -1,0 +1,56 @@
+
+@import "../../../utilities/variables";
+@import "../../../utilities/layout-mixins";
+@import "../../../utilities/responsive-mixins";
+@import "../../../utilities/effect-mixins";
+
+.experience {
+    @include spriteEffect;
+    @include adaptTo("not-mobile") {
+    }
+
+    &__header {
+        @include font-size-subheader;
+        text-transform: uppercase;
+    }
+
+    &__wrapper {
+        @include adaptTo("not-mobile") {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__subheaders {
+        @include adaptTo("not-mobile") {
+            display: flex;
+            flex-direction: column;
+
+            &--position {
+                margin-bottom: -10px;
+            }
+
+            &--company {
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+                border-bottom: solid 1px $font-link;
+            }
+
+            &--dates {
+                font-weight: 100;
+                color: $font-link;
+            }
+        }
+    }
+
+    &__points {
+        @include adaptTo("not-mobile") {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+}

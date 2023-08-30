@@ -34,7 +34,7 @@ body {
     }
 
     &__left-side {
-      width: 30%;
+      width: 20%;
       overflow: hidden;
     }
   }
@@ -42,7 +42,7 @@ body {
   &__right-side {
     position: relative;
     flex: 1;
-    width: 70%;
+    width: 80%;
     height: 90vh;
   }
 }

@@ -4,7 +4,7 @@ import social_LinkedIn from "../../assets/images/social-icons/social_linkedin.sv
 
 const Landing = () => {
   return (
-    <div className="landing">
+    <main className="landing">
       <div className="landing__wrapper">
         <h1 className="landing__name">Daniel Fernandez</h1>
         <h2 className="landing__title">Designer & Developer</h2>
@@ -33,7 +33,7 @@ const Landing = () => {
           </a>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
