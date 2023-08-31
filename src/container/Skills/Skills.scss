@@ -71,7 +71,8 @@
 
   &__section {
     @include adaptTo ("not-mobile") {    
-      width: fit-content;
+      min-width: 60%;
+      max-width: 75%;
       margin-left: 50px;
       @include spriteEffect;
     }

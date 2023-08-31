@@ -19,10 +19,8 @@
 
   &__input {
     height: 16px;
-    width: 50%;
     background-color: $background-secondary;
     border: none;
-    margin: 0 0 10px 0;
     padding: 10px;
     color: $font-main;
     font-size: 14px;
@@ -31,23 +29,46 @@
 
   &__textarea {
     height: 250px;
-    width: 50%;
     background-color: $background-secondary;
     border: none;
-    margin: 0 0 10px 0;
+    margin: 20px 0 0 0;
     padding: 10px;
     color: $font-main;
     font-size: 14px;
     resize: none;
     outline: solid rgba(255, 255, 255, 0.5) 1px;
   }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   &__submit {
     border: none;
-    background-color: $background-secondary;
-    color: $font-main;
-    width: 10%;
+    background-color: $button-background;
+    color: $font-btn;
+    width: 25%;
+    margin-top: 20px;
     height: 30px;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  &__submit:hover {
+    background-color: transparent;
+    color: $font-main;
+    border: solid $font-main 1px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  &__input-error {
+    font-style: italic;
+    font-weight: 300;
+    color: $font-error;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0 0 0;
   }
 }
