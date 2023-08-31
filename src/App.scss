@@ -5,17 +5,20 @@
 
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
   background-color: $background-base;
   color: $font-main;
   margin: 0;
   padding: 0;
   font-family: "Inter";
   font-weight: 400;
-  overflow: hidden;
+
+  @include adaptTo("not-mobile") {
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 .App {
@@ -34,15 +37,17 @@ body {
     }
 
     &__left-side {
-      width: 20%;
-      overflow: hidden;
+      @include adaptTo("not-mobile") {
+        width: 25%;
+        overflow: hidden;
+      }
     }
   }
 
   &__right-side {
     position: relative;
     flex: 1;
-    width: 80%;
+    width: 75%;
     height: 90vh;
   }
 }

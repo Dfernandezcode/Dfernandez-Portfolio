@@ -7,50 +7,97 @@
 .skills {
   @include adaptTo("not-mobile") {
     display: grid;
-    grid-template-columns: 30% 60%;
-    grid-template-rows: 1fr 1fr;  
-    margin-top: 50px;
-    height: 100%;
-    width: 100%;
+    grid-template-columns: 1fr 3fr;
+    gap: 75px;
+    margin: 50px 0 0 0;
   }
 }
 
-.techstack {
+.section__header {
+  @include font-size-subheader;
+  text-transform: uppercase;
+  margin-bottom: 30px
+}
+
+// STACK SECTION
+.stack {
+  &__section {
+    margin-bottom: 75px;
+    @include spriteEffect;
+    }
+
+  &__header {
+      @include font-size-subheader;
+      text-transform: uppercase;
+  }
+
+  &__icons{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+          &-logo {
+              width: 50px;
+              
+          }
+      @include adaptTo("not-mobile") {
+          grid-template-columns: repeat(4, 1fr);
+      }
+
+      
+  }
+
+}
+
+// LANGUAGES SECTION
+.languages {
   @include adaptTo("not-mobile") {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    
+    &__section {
+      @include spriteEffect;
+    }
   }
 
   &__header {
     @include font-size-subheader;
     text-transform: uppercase;
   }
-
-  &__icons {
-    @include adaptTo("not-mobile") {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      width: 50%;
-      gap: 20px;
-      margin-bottom: 25px;
-    }
-
-    &-logo {
-      @include adaptTo("not-mobile") {
-        display: flex;
-        width: 50px;
-      }
-    }
+  &__spoken {
+    font-size: clamp(1rem, 1.2rem, 1.5rem);
   }
 
 }
+// EDUCATION SECTION
+.education {
 
-.languages {
-  width: 70%;
-}
+  &__section {
+    @include adaptTo ("not-mobile") {    
+      width: fit-content;
+      margin-left: 50px;
+      @include spriteEffect;
+    }
+  }
 
-.experience {
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
+  &__title {
+    margin: 0;
+  }
+
+  &__subheader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__wrapper {
+    margin-bottom: 50px;
+  }
+
+  &__dates {
+    color: $font-date;
+    margin: 0;
+  }
+
+  &__description {
+    @include font-size-paragraph;
+    margin: 10px 0;
+  }
 }

@@ -1,11 +1,12 @@
 @mixin spriteEffect {
+  position: relative;
   &::after {
     content: "";
     height: 70px;
     width: 1px;
     position: absolute;
-    left: -40px;
-    top: 65%;
+    left: -20px;
+    top: 50%;
     transition: top, opacity;
     transition-duration: 600ms;
     transition-timing-function: ease;
@@ -14,7 +15,7 @@
   }
 
   &:hover::after {
-    top: 10%;
+    top: 0%;
     opacity: 1;
   }
 }

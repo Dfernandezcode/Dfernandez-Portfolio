@@ -3,11 +3,11 @@ import "./Experience.scss";
 const Experience = () => {
   return (
     <section id="experience" className="experience">
-      <h2 className="experience__header">Experience</h2>
+      <h2 className="experience__header">Work History</h2>
       <div className="experience__wrapper">
         <div className="experience__subheaders">
-          <h3 className="experience__subheaders--position">Language teacher</h3>
-          <p  className="experience__subheaders--company">International House | Cambridge Exams</p>
+          <h3 className="experience__subheaders--position">Language teacher | Examiner</h3>
+          <p  className="experience__subheaders--company">International House</p>
           
         </div>
         <p  className="experience__subheaders--dates">2016 - present</p>

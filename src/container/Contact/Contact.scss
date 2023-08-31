@@ -4,18 +4,20 @@
 @import "../../utilities/responsive-mixins";
 @import "../../utilities/effect-mixins";
 
-.contact-wrapper {
+.contact {
   display: flex;
   justify-content: flex-start;
   margin-top: 50px;
   flex-direction: column;
   height: 100%;
 
-  &__header {
-    @include font-size-subheader;
-    text-transform: uppercase;
-    margin-bottom: 0;
+  &__section {
+    @include spriteEffect;
+    
+    &--header {
+      @include font-size-subheader;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
   }
-
-  @include spriteEffect;
 }
