@@ -16,6 +16,13 @@
   }
 }
 
+@mixin font-size-landing-subheader {
+  font-size: clamp(12px, 14px, 18px);
+  @include adaptTo("not-mobile") {
+    font-size: clamp(14px, 16px, 18px);
+  }
+}
+
 @mixin font-size-subheader {
   font-size: clamp(16px, 18px, 22px);
   @include adaptTo("not-mobile") {

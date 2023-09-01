@@ -23,7 +23,7 @@ function ContactForm() {
   };
 
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p>Thanks! We'll talk soon!</p>;
   }
 
   return (

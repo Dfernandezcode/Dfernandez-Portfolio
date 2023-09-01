@@ -20,21 +20,23 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin: 50px;
+
     }
   }
 
   &__name {
     @include font-size-heading;
-    font-weight: 300;
+    font-weight: 100;
     color: $font-main;
     @include adaptTo("not-mobile") {
       @include font-size-heading;
+      min-width: 500px;
       margin: 0;
     }
   }
 
   &__title {
-    @include font-size-subheader;
+    @include font-size-landing-subheader;
     font-weight: 100;
     color: $font-main;
     margin: 0;

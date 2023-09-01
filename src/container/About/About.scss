@@ -11,7 +11,7 @@
     justify-content: flex-start;
     margin-top: 50px;
     height: 100%;
-    width: 80%;
+    width: 60%;
   }
 
   &__header {
@@ -23,10 +23,15 @@
   &__text {
     @include font-size-paragraph;
     line-height: 1.5rem;
+    font-weight: 200;
     color: $font-secondary;
+
+    &--bold {
+      font-weight: 400;
+      color: $font-link;
+    }
     @include adaptTo("not-mobile") {
       line-height: 2.5rem;
-      width: 80%;
     }
   }
 
