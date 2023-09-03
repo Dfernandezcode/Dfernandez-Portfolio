@@ -13,6 +13,7 @@
     "@formspree/react": "^2.5.0",
     "framer-motion": "^10.15.1",
     "normalize.css": "^8.0.1",
+    "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.63.6"

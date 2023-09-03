@@ -1,6 +1,7 @@
 import Project_Games from "./ProjectList/Games";
 import Project_Nailted from "./ProjectList/Nailted";
 import Project_Mini from "./ProjectList/ProjectMini";
+import RickMorty_Project from "./ProjectList/RickMorty";
 import Project_Tmdb from "./ProjectList/Tmdb";
 import "./Projects.scss";
 
@@ -12,6 +13,7 @@ const Projects = () => {
         <Project_Nailted />
         <Project_Games />
         <Project_Tmdb />
+        <RickMorty_Project />
         <Project_Mini />
       </div>
     </div>

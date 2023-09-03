@@ -10,9 +10,9 @@
 }
 
 @mixin font-size-heading {
-  font-size: clamp(28px, 30px, 34px);
+  font-size: clamp(28px, 24px, 28px);
   @include adaptTo("not-mobile") {
-    font-size: clamp(40px, 50px, 60px);
+    font-size: clamp(30px, 40px, 50px);
   }
 }
 

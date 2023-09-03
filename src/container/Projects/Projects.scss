@@ -22,15 +22,16 @@
   }
 
   &__wrapper {
-    display: flex;
-    @include adaptTo("not-mobile") {
-    }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 20px 50px;
+    
   }
 
   &__card {
     @include adaptTo("not-mobile") {
-      width: 25%;
-      margin-right: 30px;
+
     }
 
     &--title {
