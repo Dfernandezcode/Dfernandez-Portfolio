@@ -10,10 +10,10 @@ const Projects = () => {
     <div id="projects" className="projects">
       <h1 className="projects__header">Projects</h1>
       <div className="projects__wrapper">
-        <Project_Nailted />
+        <RickMorty_Project />
         <Project_Games />
         <Project_Tmdb />
-        <RickMorty_Project />
+        <Project_Nailted />
         <Project_Mini />
       </div>
     </div>

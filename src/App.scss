@@ -9,7 +9,6 @@
 }
 
 .App {
-  flex: 1 0 auto;
   @include adaptTo("not-mobile") {
     &__wrapper {
       display: flex;
@@ -26,8 +25,7 @@
       
       @include adaptTo("not-mobile") {
         display: block;
-        width: 30%;
-        overflow: hidden;
+        width: 20%;
       }
 
       @include adaptTo("desktop-all") {
@@ -40,8 +38,7 @@
     width: 100%;
     @include adaptTo("not-mobile") {
       position: relative;
-      flex: 1;
-      width: 70%;
+      width: 80%;
     }
 
     @include adaptTo("desktop-all") {

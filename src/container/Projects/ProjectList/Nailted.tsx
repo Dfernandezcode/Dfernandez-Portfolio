@@ -5,7 +5,7 @@ const Project_Nailted = () => {
     <div className="projects__card">
       <h3 className="projects__card--title">
         <a href="https://nailted-form-front.onrender.com/" className="projects__card--link" target="_blank" rel="noopener noreferrer">
-          Integrated question form ↗
+          Company performance question form ↗
         </a>
       </h3>
       <p className="projects__card--text">Building a question form can seem simple; but alot has to happen behind the scenes.</p>

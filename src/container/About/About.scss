@@ -8,11 +8,13 @@
   @include flex-center;
   flex-direction: column;
   margin: 25px;
+  width: 100%;
   @include adaptTo("not-mobile") {
     justify-content: flex-start;
     margin-top: 50px;
     height: 100%;
     width: 60%;
+    @include spriteEffect;
   }
 
   &__header {
@@ -36,6 +38,4 @@
       line-height: 2.5rem;
     }
   }
-
-  @include spriteEffect;
 }
