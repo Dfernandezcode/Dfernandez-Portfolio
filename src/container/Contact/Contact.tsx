@@ -9,8 +9,8 @@ const Contact = () => {
         <p className="contact__section--text">
           I'm always looking for new opportunities. Contact me and lets talk!
         </p>
+        <p> +34 • 722 280 416</p>
       </div>
-
       <ContactForm />
     </section>
   );

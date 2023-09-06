@@ -7,7 +7,7 @@
 .projects {
   @include adaptTo("not-mobile") {
     height: 100%;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -25,7 +25,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: repeat(2, 1fr); 
-    gap: 20px 50px;
+    gap: 20px 20px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin-right: 50px;
     
   }
 
@@ -53,6 +56,44 @@
       color: $font-link;
     }
 
+    &--mini {
+      @include font-size-paragraph;
+      color: $font-secondary;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5rem;
+      list-style-type: none
+    }
+
     @include spriteEffect;
+  }
+
+  &__mini {
+    list-style-type: none;
+  }
+}
+
+.techbox {
+  display: flex;
+  gap: 0px 10px;
+  flex-wrap: wrap;
+
+  &__item {
+    width: fit-content;
+    font-weight: 400;
+    border: solid 1px $border-sprite;
+    border-radius: 25px;
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-size: 10px;
+    opacity: 0.5;
+  }
+
+  &__item:hover{
+    opacity: 1;
+    transition: 0.3s;
+    background-color: $button-background;
+    color: $font-btn;
   }
 }

@@ -5,7 +5,6 @@
 
 .landing {
   display: flex;
-  align-items: flex-start;
 
   @include adaptTo("not-mobile") {
     margin: 0;
@@ -13,31 +12,47 @@
   }
 
   &__wrapper {
-    margin: 25px;
-    @include adaptTo("not-mobile"){
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    margin: 50px 0 0 50px;
+    flex-direction: column;
+    margin: 25px;
+    @include adaptTo("not-mobile") {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 50px 0 0 50px;
     }
   }
 
+  &__link {
+    text-decoration: none;
+  }
+
   &__name {
+    margin: 0;
     @include font-size-heading;
     font-weight: 100;
-    color: $font-main;
+    color: $font-lainding-name;
     @include adaptTo("not-mobile") {
       @include font-size-heading;
       min-width: 350px;
       margin: 0;
     }
+    &--bold {
+      font-weight: 400;
+    }
+
+    @include adaptTo("desktop-all") {
+      @include font-size-heading;
+    }
   }
 
   &__title {
-    @include font-size-landing-subheader;
-    font-weight: 100;
-    color: $font-main;
+    @include font-size-subheading;
+    font-weight: 300;
+    opacity: 0.5;
+    color: $font-mainsub;
     margin: 0;
   }
 
@@ -46,7 +61,7 @@
     justify-content: flex-start;
 
     &-icon {
-      width: 30px;
+      width: 24px;
       color: $icon_light;
       margin: 12px 12px 0 0;
     }

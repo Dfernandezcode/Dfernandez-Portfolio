@@ -13,6 +13,11 @@ const RickMorty_Project = () => {
         , I was tasked with building out a functioning wiki using only basic Javascript, CSS and HTML.
       </p>
       <p className="projects__card--text">It was a great project to practice and consolidate my Javascript skills.</p>
+      <div className="techbox">
+        <p className="techbox__item">Javascript</p>
+        <p className="techbox__item">HTML</p>
+        <p className="techbox__item">CSS</p>
+      </div>
     </div>
   );
 };

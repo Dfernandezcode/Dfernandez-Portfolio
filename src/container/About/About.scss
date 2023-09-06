@@ -7,6 +7,7 @@
 .about-card {
   @include flex-center;
   flex-direction: column;
+  margin: 25px;
   @include adaptTo("not-mobile") {
     justify-content: flex-start;
     margin-top: 50px;
@@ -29,6 +30,7 @@
     &--bold {
       font-weight: 400;
       color: $font-link;
+      text-decoration: none;
     }
     @include adaptTo("not-mobile") {
       line-height: 2.5rem;

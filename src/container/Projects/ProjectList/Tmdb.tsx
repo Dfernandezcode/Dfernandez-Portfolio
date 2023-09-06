@@ -18,6 +18,11 @@ const Project_Tmdb = () => {
         to fetch movie data and dyanmically generate content as well as a quiz
         component that users can play with.
       </p>
+      <div className="techbox">
+        <p className="techbox__item">React</p>
+        <p className="techbox__item">HTML</p>
+        <p className="techbox__item">SCSS</p>
+      </div>
     </div>
   );
 };

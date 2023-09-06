@@ -5,6 +5,7 @@
 @import "../../utilities/effect-mixins";
 
 .skills {
+  margin: 25px;
   @include adaptTo("not-mobile") {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -19,12 +20,21 @@
   margin-bottom: 30px
 }
 
+
 // STACK SECTION
 .stack {
   &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+
+    @include adaptTo("not-mobile") {
     margin-bottom: 75px;
+    align-items: flex-start;
     @include spriteEffect;
     }
+  }
 
   &__header {
       @include font-size-subheader;
@@ -32,13 +42,20 @@
   }
 
   &__icons{
-      display: grid;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    @include adaptTo("not-mobile") {
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
+    }
           &-logo {
+            width: 40px;
+            @include adaptTo("not-mobile") {
               width: 50px;
-              
+            }
           }
+          
       @include adaptTo("not-mobile") {
           grid-template-columns: repeat(4, 1fr);
       }
@@ -50,9 +67,10 @@
 
 // LANGUAGES SECTION
 .languages {
-  @include adaptTo("not-mobile") {
-    
+  
     &__section {
+      margin-bottom: 50px;
+      @include adaptTo("not-mobile") {
       @include spriteEffect;
     }
   }
@@ -62,13 +80,13 @@
     text-transform: uppercase;
   }
   &__spoken {
-    font-size: clamp(1rem, 1.2rem, 1.5rem);
+    @include font-size-paragraph;
   }
 
 }
 // EDUCATION SECTION
 .education {
-
+  
   &__section {
     @include adaptTo ("not-mobile") {    
       min-width: 60%;
@@ -80,24 +98,33 @@
 
   &__title {
     margin: 0;
+    @include font-size-subheader;
   }
 
   &__subheader {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 10px;
+    justify-content: space-between;
+    @include adaptTo ("not-mobile") { 
+      justify-content: space-between;
+     }
   }
 
   &__wrapper {
+    margin-bottom: 25px;
+    @include adaptTo ("not-mobile") {  
     margin-bottom: 50px;
+    }
   }
 
   &__dates {
+    @include font-size-paragraph;
     color: $font-date;
     margin: 0;
   }
 
   &__description {
+    opacity: 0.5;
     @include font-size-paragraph;
     margin: 10px 0;
   }

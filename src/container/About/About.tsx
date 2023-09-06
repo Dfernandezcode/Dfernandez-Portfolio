@@ -9,8 +9,8 @@ const About = () => {
           Back in 2016, I decided to start exploring the world of UIUX design at <a href="https://www.ironhack.com/es/en" className="about-card__text--bold">Ironhack ↗</a> Madrid
           causing me to fall head first into the world of coding and web development.
           Today, and I've had the privilege of finishing a web development
-          masters at <a href="https://thevalley.es/" className="about-card__text--bold">TheValley Business School ↗</a> and building software for a web
-          consultancy: <a href="https://nailted.com/" className="about-card__text--bold">Nailted ↗.</a></p> 
+          masters at <a href="https://thevalley.es/" className="about-card__text--bold">The Valley Business School ↗</a> and building software for a web
+          consultancy: <a href="https://nailted.com/" className="about-card__text--bold">Nailted ↗</a>.</p> 
           
           <p className="about-card__text">My main focus these days is to improve my code
           further and developing projects. I continue to expand my

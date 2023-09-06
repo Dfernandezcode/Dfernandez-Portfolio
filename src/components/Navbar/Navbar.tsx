@@ -11,11 +11,11 @@ const Navbar: React.FC<NavbarProps> = ({ setActiveCard }) => {
   return (
     <div>
       <nav className="nav">
-        <ul className="nav-list">
-          <li>
+        <ul className="nav__list">
+          <li className="nav__list--li">
             <a
               href="#about"
-              className="nav-list__link"
+              className="nav__list--link"
               onClick={() => {
                 setActiveCard("about");
                 setSelectedLink("about");
@@ -24,10 +24,10 @@ const Navbar: React.FC<NavbarProps> = ({ setActiveCard }) => {
               {selectedLink === "about" ? "•" : "About"}
             </a>
           </li>
-          <li>
+          <li className="nav__list--li">
             <a
               href="#skills"
-              className="nav-list__link"
+              className="nav__list--link"
               onClick={() => {
                 setActiveCard("skills");
                 setSelectedLink("skills");
@@ -36,10 +36,10 @@ const Navbar: React.FC<NavbarProps> = ({ setActiveCard }) => {
               {selectedLink === "skills" ? "•" : "Skills & Education"}
             </a>
           </li>
-          <li>
+          <li className="nav__list--li">
             <a
               href="#projects"
-              className="nav-list__link"
+              className="nav__list--link"
               onClick={() => {
                 setActiveCard("projects");
                 setSelectedLink("projects");
@@ -48,10 +48,10 @@ const Navbar: React.FC<NavbarProps> = ({ setActiveCard }) => {
               {selectedLink === "projects" ? "•" : "Projects"}
             </a>
           </li>
-          <li>
+          <li className="nav__list--li">
             <a
               href="#contact"
-              className="nav-list__link"
+              className="nav__list--link"
               onClick={() => {
                 setActiveCard("contact");
                 setSelectedLink("contact");

@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./App.scss";
 import { Navbar, MouseFollower } from "./components/index";
-import { Landing, Footer, About, Skills, Projects, Contact } from "./container";
+import { Landing, About, Skills, Projects, Contact, Footer } from "./container";
 import { AnimatePresence, motion } from "framer-motion";
-
 function App() {
   const [activeCard, setActiveCard] = useState<string | null>(null);
-
+  const [selectedLink, setSelectedLink] = useState<string | null>(null);
   const cardVariants = {
     hidden: { opacity: 0, x: 100 },
     visible: {
@@ -80,7 +79,11 @@ function App() {
             )}
           </AnimatePresence>
         </div>
-        <Footer />
+        <Footer 
+        setActiveCard={setActiveCard} 
+        setSelectedLink={setSelectedLink} 
+        selectedLink={selectedLink}
+        />
       </div>
 
       <MouseFollower />

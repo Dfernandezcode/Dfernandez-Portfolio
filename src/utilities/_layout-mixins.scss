@@ -14,24 +14,38 @@
   @include adaptTo("not-mobile") {
     font-size: clamp(30px, 40px, 50px);
   }
+  @include adaptTo("desktopAll") {
+    font-size: clamp(20px, 24px, 26px);
+  }
+  @include adaptTo("desktop") {
+    font-size: clamp(22px, 26px, 28px);
+  }
 }
 
-@mixin font-size-landing-subheader {
+@mixin font-size-subheading {
   font-size: clamp(12px, 14px, 18px);
   @include adaptTo("not-mobile") {
-    font-size: clamp(14px, 16px, 18px);
+    font-size: clamp(16px, 18px, 22px);
   }
 }
 
 @mixin font-size-subheader {
-  font-size: clamp(16px, 18px, 22px);
+  font-size: clamp(14px, 16px, 18px);
   @include adaptTo("not-mobile") {
     font-size: clamp(18px, 22px, 24px);
   }
 }
 
-@mixin font-size-paragraph {
+@mixin font-size-nav {
   font-size: clamp(14px, 16px, 18px);
+}
+
+
+@mixin font-size-paragraph {
+  font-size: clamp(12px, 14px, 16px);
+  @include adaptTo("not-mobile") {
+    font-size: clamp(14px, 16px, 18px);
+  }
 }
 
 @mixin font-size-footer {

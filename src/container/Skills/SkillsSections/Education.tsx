@@ -11,7 +11,7 @@ const Education = () => {
           <p className="education__dates">2023</p>
         </div>
         <p className="education__description">
-          Master in Web Development - Full Stack Developer
+          Master in Web Development - Full Stack.
         </p>
       </div>
       <div className="education__wrapper">
