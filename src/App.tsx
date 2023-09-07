@@ -4,20 +4,19 @@ import { Navbar, MouseFollower } from "./components/index";
 import { Landing, About, Skills, Projects, Contact, Footer } from "./container";
 import { AnimatePresence, motion } from "framer-motion";
 function App() {
-  const [activeCard, setActiveCard] = useState<string | null>(null);
+  const [activeCard, setActiveCard] = useState<string | null>("about");
   const [selectedLink, setSelectedLink] = useState<string | null>(null);
   const cardVariants = {
-    hidden: { opacity: 0, x: 100 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      x: 0,
       transition: {
-        type: "tween", // Using tween for a more controlled animation
+        type: "tween",
         duration: 0.5,
-        ease: "easeInOut", // easeInOut for smoother start and finish
+        ease: "easeInOut",
       },
     },
-    exit: { opacity: 0, transition: { duration: 0.3 } },
+    exit: { opacity: 0, transition: { duration: 0.2 } },
   };
 
   return (
@@ -27,8 +26,9 @@ function App() {
           <Landing />
           <Navbar setActiveCard={setActiveCard} />
         </div>
+        
         <div className="App__right-side">
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {activeCard === "about" && (
               <motion.div
                 key="about"

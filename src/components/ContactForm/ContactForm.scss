@@ -8,8 +8,11 @@
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+  width: 100%;
+  @include adaptTo("not-mobile") {
   @include spriteEffect;
-
+  }
+  
   &__address {
     font-size: 16px;
     font-weight: 400;
@@ -36,7 +39,6 @@
     color: $font-main;
     font-size: 14px;
     resize: none;
-    outline: solid rgba(255, 255, 255, 0.5) 1px;
   }
 
   &__btn-wrapper {

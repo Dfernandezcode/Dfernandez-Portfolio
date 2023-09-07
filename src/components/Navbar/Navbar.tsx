@@ -6,7 +6,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ setActiveCard }) => {
-  const [selectedLink, setSelectedLink] = useState<string | null>(null);
+  const [selectedLink, setSelectedLink] = useState<string | null>("about");
 
   return (
     <div>
@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ setActiveCard }) => {
                 setSelectedLink("about");
               }}
             >
-              {selectedLink === "about" ? "•" : "About"}
+              {selectedLink === "about" ? "•" : "Home"}
             </a>
           </li>
           <li className="nav__list--li">
@@ -45,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ setActiveCard }) => {
                 setSelectedLink("projects");
               }}
             >
-              {selectedLink === "projects" ? "•" : "Projects"}
+              {selectedLink === "projects" ? "•" : "Projects "}
             </a>
           </li>
           <li className="nav__list--li">

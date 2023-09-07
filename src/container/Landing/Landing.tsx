@@ -1,6 +1,7 @@
 import "./Landing.scss";
 import social_Github from "../../assets/images/social-icons/social_github.svg";
 import social_LinkedIn from "../../assets/images/social-icons/social_linkedin.svg";
+import { About } from "..";
 
 const Landing = () => {
   return (

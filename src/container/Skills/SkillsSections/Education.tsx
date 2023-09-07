@@ -2,7 +2,7 @@ import "../Skills.scss"
 const Education = () => {
   return (
     <section id="experience" className="education__section section__wrapper">
-      <h2 className="education__header section__header">Education</h2>
+      <h2 className="education__header stack__header">Education</h2>
       <div className="education__wrapper">
         <div className="education__subheader">
           <h3 className="education__title">

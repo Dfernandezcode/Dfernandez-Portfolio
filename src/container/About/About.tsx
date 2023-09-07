@@ -3,8 +3,8 @@ import "./About.scss";
 const About = () => {
   return (
     <div id="about" className="about-card">
+      <h1 className="about-card__header">About Me</h1>
       <div className="about-card__wrapper">
-        <h1 className="about-card__header">About me</h1>
         <p className="about-card__text">
           Back in 2016, I decided to start exploring the world of UIUX design at <a href="https://www.ironhack.com/es/en" className="about-card__text--bold">Ironhack ↗</a> Madrid
           causing me to fall head first into the world of coding and web development.

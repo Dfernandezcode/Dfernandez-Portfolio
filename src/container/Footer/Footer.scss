@@ -5,28 +5,22 @@
 
 .footer {
   display: flex;
-  flex-direction: column;
-  padding: 25px;
+  justify-content: space-around;
+  gap: 25px;
+  width: 100vw;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: solid 1px $border-box1;
+  
+  
   @include adaptTo("not-mobile") {
-    position: fixed;
-    bottom: 0;
-    right: 0;
     justify-content: flex-end;
-    margin: 0;
-    padding: 0 5rem 5rem 0;
-    border: none;
-  }
-
-  &__link {
-    @include font-size-footer;
-    color: $font-secondary;
-    font-weight: 400;
-    text-align: right;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
-    &:hover {
-      color: $font-link;
-    }
+    position: absolute;
+    width: 95vw;
+    margin-top: 0;
+    padding: 0;
+    border-top: none;
+    bottom: 0;
   }
 
   &__text {

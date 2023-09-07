@@ -4,19 +4,16 @@ const Project_Tmdb = () => {
   return (
     <div className="projects__card">
       <h3 className="projects__card--title">
-        Movie wiki website with quiz component ↗
+        Movie wiki ↗
       </h3>
       <p className="projects__card--text">
-        This project used react hooks and api requests to build a functional
-        movie wiki website.<br></br> I used the{" "}
+       Developed using the{" "}
         <a
           className="projects__card--link"
           href="https://developer.themoviedb.org/reference/search-movie"
         >
           TMDB API ↗
-        </a>{" "}
-        to fetch movie data and dyanmically generate content as well as a quiz
-        component that users can play with.
+        </a>{" "} with React and supporting technologies.
       </p>
       <div className="techbox">
         <p className="techbox__item">React</p>

@@ -31,11 +31,11 @@ function ContactForm() {
       <label className="form-email__address" htmlFor="email">
         Email Address:
       </label>
-      <input className="form-email__input" id="email" type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <input className="form-email__input" placeholder="Your email goes here!" id="email" type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       {emailError && <p className="form-email__input-error">Please input an email.</p>}
       <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-      <textarea className="form-email__textarea" id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
+      <textarea className="form-email__textarea"  placeholder="What do you want to talk about?"  id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
       {messageError && <p className="form-email__input-error">Please input a message with at least 20 characters</p>}
       <ValidationError prefix="Message" field="message" errors={state.errors} />
 

@@ -5,27 +5,24 @@ const Project_Nailted = () => {
     <div className="projects__card">
       <h3 className="projects__card--title">
         <a href="https://nailted-form-front.onrender.com/" className="projects__card--link" target="_blank" rel="noopener noreferrer">
-          Company performance question form ↗
+          Integrated question form ↗
         </a>
       </h3>
-      <p className="projects__card--text">Building a question form can seem simple; but alot has to happen behind the scenes.</p>
       <p className="projects__card--text">
-        My team and I were tasked with designing and building a{" "}
-        <a href="https://nailted-form-front.onrender.com/" className="projects__card--link" target="_blank" rel="noopener noreferrer">
-          question form ↗
+        Fullstack project for <a className="projects__card--link">Nailted ↗</a> with supervision from{" "}
+        <a className="projects__card--link" href="https://clouddistrict.com/">
+          Cloud District ↗
         </a>{" "}
-        to be potentially integrated the{" "}
-        <a className="projects__card--link" href="https://nailted.com/" target="_blank" rel="noopener noreferrer">
-          client's ↗
-        </a>{" "}
-        website.
+        with React and supporting technologies.
       </p>
+
       <div className="techbox">
         <p className="techbox__item">React</p>
         <p className="techbox__item">HTML</p>
         <p className="techbox__item">SCSS</p>
         <p className="techbox__item">Typescript</p>
         <p className="techbox__item">Node.js</p>
+        <p className="techbox__item">MongoDB</p>
         <p className="techbox__item">Postman</p>
         <p className="techbox__item">Figma</p>
       </div>

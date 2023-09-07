@@ -3,7 +3,7 @@
 @import "./utilities/layout-mixins";
 @import "./utilities/responsive-mixins";
 
-body {
+body { 
     background-color: $background-base;
     color: $font-main;
     width: 100vw;
@@ -11,10 +11,8 @@ body {
     margin: 0;
     font-family: "Inter";
     font-weight: 400;
-    justify-content: flex-start;
-    align-items: flex-start;
     @include adaptTo("not-mobile") {
-      display: flex;  
+      display: flex;
       margin: 0;
       padding: 0;
       width: 100vw;
