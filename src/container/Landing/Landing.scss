@@ -3,6 +3,7 @@
 
 .landing {
   display: flex;
+  margin-top: 40px;
 
   @include adaptTo("not-mobile") {
     margin: 0;
@@ -13,7 +14,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin: 25px;
+    margin: 20px;
     
     @include adaptTo("not-mobile") {
       display: flex;
@@ -29,15 +30,13 @@
   }
 
   &__name {
-    margin: 0;
     @include font-size-heading;
     font-weight: 200;
-    padding: 0;
-
+    text-align: left;
+    margin: 0;
     @include adaptTo("not-mobile") {
       @include font-size-heading;
       min-width: 350px;
-      margin: 0;
     }
 
     @include adaptTo("desktop-all") {
@@ -48,13 +47,13 @@
   &__title {
     @include font-size-subheading;
     font-weight: 300;
-    opacity: 0.5;
-    margin: 0;
+    margin: 0 0 0 4px;
   }
 
   &__social {
     display: flex;
     justify-content: flex-start;
+    margin-left: 5px;
 
     &-icon {
       width: 24px;
