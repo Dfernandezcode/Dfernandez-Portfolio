@@ -44,7 +44,6 @@
       align-items: flex-start;
       justify-content: flex-start;
       width: 95%;
-      @include spriteEffect;
     }
 
     &--title {
@@ -112,6 +111,9 @@
     }
 
     &__card {
+      @include adaptTo("not-mobile") {
+        @include spriteEffect($border-sprite);
+        }
       &--title {
         color: $font-main;
       }
@@ -146,6 +148,9 @@
     }
 
     &__card {
+      @include adaptTo("not-mobile") {
+        @include spriteEffect($border-sprite);
+        }
       &--title {
         color: $font-main;
       }

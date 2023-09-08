@@ -5,6 +5,7 @@
 .skills {
   margin: 25px;
   width: 100%;
+
   @include adaptTo("not-mobile") {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -21,10 +22,10 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+
     @include adaptTo("not-mobile") {
       margin-bottom: 75px;
       align-items: flex-start;
-      @include spriteEffect;
     }
   }
 
@@ -40,16 +41,20 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
+
     @include adaptTo("not-mobile") {
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
+
     &-logo {
       width: 40px;
+
       @include adaptTo("not-mobile") {
         width: 50px;
       }
     }
+
     @include adaptTo("not-mobile") {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -59,9 +64,6 @@
 .languages {
   &__section {
     margin-bottom: 50px;
-    @include adaptTo("not-mobile") {
-      @include spriteEffect;
-    }
   }
 
   &__header {
@@ -74,6 +76,7 @@
     font-style: italic;
     font-weight: 200;
   }
+
   &__spoken {
     @include font-size-paragraph;
   }
@@ -85,7 +88,6 @@
       min-width: 60%;
       max-width: 75%;
       margin-left: 50px;
-      @include spriteEffect;
     }
   }
 
@@ -98,6 +100,7 @@
     display: flex;
     margin-bottom: 10px;
     justify-content: space-between;
+
     @include adaptTo("not-mobile") {
       justify-content: space-between;
     }
@@ -105,6 +108,7 @@
 
   &__wrapper {
     margin-bottom: 25px;
+
     @include adaptTo("not-mobile") {
       margin-bottom: 50px;
     }
@@ -126,6 +130,12 @@
   @import "../../utilities/variables-dark";
 
   .stack {
+    &__section {
+      @include adaptTo("not-mobile") {
+        @include spriteEffect($border-sprite);
+      }
+    }
+
     &__header {
       color: $font-main;
       border-bottom: solid 1px $border-box1;
@@ -133,11 +143,26 @@
   }
 
   .education {
+    &__section {
+      @include adaptTo("not-mobile") {
+        @include spriteEffect($border-sprite);
+      }
+    }
     &__dates {
       color: $font-date;
+
     }
+
     &__description {
       color: $font-secondary;
+    }
+  }
+
+  .languages {
+    &__section {
+      @include adaptTo("not-mobile") {
+        @include spriteEffect($border-sprite);
+      }
     }
   }
 }
@@ -146,6 +171,12 @@
   @import "../../utilities/variables-light";
 
   .stack {
+    &__section {
+      @include adaptTo("not-mobile") {
+        @include spriteEffect($border-sprite);
+      }
+    }
+
     &__header {
       color: $font-main;
       border-bottom: solid 1px $border-box1;
@@ -153,11 +184,26 @@
   }
 
   .education {
+    &__section {
+      @include adaptTo("not-mobile") {
+        @include spriteEffect($border-sprite);
+      }
+    }
     &__dates {
       color: $font-date;
+
     }
+
     &__description {
       color: $font-secondary;
+    }
+  }
+
+  .languages {
+    &__section {
+      @include adaptTo("not-mobile") {
+        @include spriteEffect($border-sprite);
+      }
     }
   }
 }

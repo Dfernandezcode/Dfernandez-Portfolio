@@ -1,9 +1,6 @@
-@import "variables-dark";
-@import "variables-light";
-
-@mixin spriteEffect {
+@mixin spriteEffect($color) {
   position: relative;
-  
+
   &::after {
     content: "";
     height: 70px;
@@ -14,8 +11,8 @@
     transition: top, opacity;
     transition-duration: 600ms;
     transition-timing-function: ease;
-    background: linear-gradient(transparent, $border-sprite, transparent);
     opacity: 0;
+    background: linear-gradient(transparent, $color, transparent);
   }
 
   &:hover::after {
@@ -24,9 +21,9 @@
   }
 }
 
-@mixin spriteEffect-mid {
+@mixin spriteEffect-mid($color) {
   position: relative;
-  
+
   &::after {
     content: "";
     height: 70px;
@@ -37,12 +34,36 @@
     transition: top, opacity;
     transition-duration: 600ms;
     transition-timing-function: ease;
-    background: linear-gradient(transparent, $border-sprite, transparent);
     opacity: 0;
+    background: linear-gradient(transparent, $color, transparent);
   }
 
   &:hover::after {
     top: 0%;
     opacity: 1;
+  }
+}
+
+@import "../utilities/variables-dark";
+
+.dark {
+  &::after {
+    @include spriteEffect($border-sprite);
+  }
+
+  &::after {
+    @include spriteEffect-mid($border-sprite);
+  }
+}
+
+@import "../utilities/variables-light";
+
+.light {
+  &::after {
+    @include spriteEffect($border-sprite);
+  }
+
+  &::after {
+    @include spriteEffect-mid($border-sprite);
   }
 }

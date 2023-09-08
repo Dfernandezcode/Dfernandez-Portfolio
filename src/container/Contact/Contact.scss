@@ -1,6 +1,4 @@
 @import "../../utilities/fonts";
-@import "../../utilities/variables-dark";
-@import "../../utilities/variables-light";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/responsive-mixins";
 @import "../../utilities/effect-mixins";
@@ -9,23 +7,59 @@
   @include flex-center;
   flex-direction: column;
   width: 85%;
+
   @include adaptTo("not-mobile") {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: 50px;
-  margin-left: 50px;
-  flex-direction: column;
-  width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-left: 50px;
+    flex-direction: column;
+    width: 80%;
   }
+
   &__section {
     @include adaptTo("not-mobile") {
-    @include spriteEffect;
     }
+
     &--header {
-      @include font-size-subheader;
       text-transform: uppercase;
       margin-bottom: 0;
+    }
+  }
+}
+
+
+// Dark Theme
+.dark {
+  @import "../../utilities/variables-dark";
+
+  .contact {
+    &__section {
+      @include adaptTo("not-mobile") {
+        @include spriteEffect($border-sprite);
+      }
+  
+      &--header {
+        @include font-size-subheader;
+      }
+    }
+  }
+}
+
+// Light Theme
+.light {
+  @import "../../utilities/variables-light";
+
+  .contact {
+    &__section {
+      @include adaptTo("not-mobile") {
+        @include spriteEffect($border-sprite);
+      }
+  
+      &--header {
+        @include font-size-subheader;
+      }
     }
   }
 }

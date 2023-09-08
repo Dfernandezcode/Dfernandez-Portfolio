@@ -1,6 +1,4 @@
 @import "../../utilities/fonts";
-@import "../../utilities/variables-dark";
-@import "../../utilities/variables-light";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/effect-mixins";
 @import "../../utilities/responsive-mixins";
@@ -10,34 +8,26 @@
   flex-direction: column;
   margin-top: 50px;
   width: 100%;
-  @include adaptTo("not-mobile") {
-  @include spriteEffect;
-  }
   
   &__address {
     font-size: 16px;
     font-weight: 400;
-    color: $font-main;
     margin: 0 0 10px 0;
   }
 
   &__input {
     height: 16px;
-    background-color: $background-secondary;
     border: none;
     padding: 10px;
-    color: $font-main;
     font-size: 14px;
     outline: solid rgba(255, 255, 255, 0.5) 1px;
   }
 
   &__textarea {
     height: 250px;
-    background-color: $background-secondary;
     border: none;
     margin: 20px 0 0 0;
     padding: 10px;
-    color: $font-main;
     font-size: 14px;
     resize: none;
   }
@@ -49,8 +39,6 @@
 
   &__submit {
     border: none;
-    background-color: $button-background;
-    color: $font-btn;
     width: 25%;
     margin-top: 20px;
     height: 30px;
@@ -60,18 +48,94 @@
 
   &__submit:hover {
     background-color: transparent;
-    color: $font-main;
-    border: solid $font-main 1px;
     transition: all 0.5s ease-in-out;
   }
   
   &__input-error {
     font-style: italic;
     font-weight: 300;
-    color: $font-error;
     font-size: 14px;
     display: flex;
     justify-content: flex-start;
     margin: 10px 0 0 0;
+  }
+}
+
+
+.dark {
+  @import "../../utilities/variables-dark";
+
+  .form-email {
+
+    @include adaptTo("not-mobile") {
+      @include spriteEffect($border-sprite);
+    }
+    
+    &__address {
+      color: $font-main;
+    }
+
+    &__input {
+      color: $font-main;
+      background-color: $background-secondary;
+    }
+
+    &__input-error {
+      color: $font-error;
+    }
+
+    &__textarea {
+      color: $font-main;
+      background-color: $background-secondary;
+    }
+
+    &__submit {
+      background-color: $button-background;
+      color: $font-btn;
+    }
+
+    &__submit:hover {
+      color: $font-main;
+      border: solid $font-main 1px;
+    }
+  }
+}
+
+.light {
+  @import "../../utilities/variables-light";
+
+  .form-email {
+
+    @include adaptTo("not-mobile") {
+      @include spriteEffect($border-sprite);
+    }
+    
+    &__address {
+      color: $font-main;
+    }
+
+    &__input {
+      color: $font-main;
+      background-color: $background-secondary;
+    }
+
+    &__input-error {
+      color: $font-error;
+    }
+
+    &__textarea {
+      color: $font-main;
+      background-color: $background-secondary;
+    }
+
+    &__submit {
+      background-color: $button-background;
+      color: $font-btn;
+    }
+
+    &__submit:hover {
+      color: $font-main;
+      border: solid $font-main 1px;
+    }
   }
 }
