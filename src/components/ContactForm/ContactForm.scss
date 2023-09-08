@@ -20,7 +20,6 @@
     border: none;
     padding: 10px;
     font-size: 14px;
-    outline: solid rgba(255, 255, 255, 0.5) 1px;
   }
 
   &__textarea {
@@ -116,7 +115,7 @@
 
     &__input {
       color: $font-main;
-      background-color: $background-secondary;
+      background-color: $background-textarea;
     }
 
     &__input-error {
@@ -125,7 +124,7 @@
 
     &__textarea {
       color: $font-main;
-      background-color: $background-secondary;
+      background-color: $background-textarea;
     }
 
     &__submit {

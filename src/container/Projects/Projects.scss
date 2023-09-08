@@ -91,7 +91,6 @@
     padding: 5px 10px;
     margin: 5px 0;
     font-size: 10px;
-    opacity: 0.6;
   }
 
   &__item:hover {
@@ -130,8 +129,8 @@
 
   .techbox {
     &__item {
-      color: $font-main;
-      border: solid 1px $border-box1;
+      color: $font-btn;
+      background-color: $button-background;
     }
   }
 }
@@ -140,7 +139,6 @@
 .light {
   @import "../../utilities/variables-light";
 
-  // Assuming the light theme styles are similar to the dark
   .projects {
     &__header {
       color: $font-main;
@@ -167,8 +165,8 @@
 
   .techbox {
     &__item {
-      color: $font-main;
-      border: solid 1px $border-box1;
+      color: $font-btn;
+      background-color: $button-background;
     }
   }
 }

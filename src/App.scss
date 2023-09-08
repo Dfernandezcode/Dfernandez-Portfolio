@@ -1,10 +1,9 @@
 @import "./utilities/fonts";
 @import "./utilities/layout-mixins";
 @import "./utilities/responsive-mixins";
-@import "./utilities/variables-dark";
 
 * {
-  transition: all 0.1s ease;
+  transition: background-color 0.5s ease, color 0.1s ease;
 }
 
 body {
@@ -83,8 +82,8 @@ body {
       background-size: 2vmin 2vmin;
       border: solid 1px $border-box1;
       box-shadow:
-        0 0 0 55px #0a0a0a, 
-        0 0 0 105px #0a0a0a;
+        0 0 0 55px $background-base,
+        0 0 0 105px $background-base;
       color: $font-main;
     }
   }
@@ -97,6 +96,9 @@ body {
     &__wrapper {
       background-color: $background-base;
       border: solid 1px $border-box1;
+      box-shadow:
+        0 0 0 55px $background-base,
+        0 0 0 105px $background-base;
       background-image: radial-gradient(rgba(10, 10, 10, 0.8) 5%, transparent 5%);
       background-position: 0% 0%;
       background-size: 2vmin 2vmin;
