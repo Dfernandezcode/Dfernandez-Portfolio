@@ -39,6 +39,10 @@
   }
 }
 
+@mixin font-size-theme {
+  font-size: clamp(12px, 14px, 16px);
+}
+
 @mixin font-size-footer {
   font-size: clamp(8px, 12px, 16px);
   @include adaptTo("not-mobile") {

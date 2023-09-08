@@ -1,5 +1,4 @@
 @import "../../utilities/fonts";
-@import "../../utilities/variables";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/responsive-mixins";
 @import "../../utilities/effect-mixins";
@@ -24,16 +23,15 @@
   &__header {
     @include font-size-subheader;
     font-weight: 400;
-    color: $font-secondary;
     text-align: center;
+    padding-bottom: 10px;
     margin-bottom: 25px;
     @include adaptTo("not-mobile") {
       @include font-size-subheader;
-    text-transform: uppercase;
-    text-align: left;
-    margin-bottom: 50px;
-    border-bottom: solid 1px $border-box1;
-    width: 100%
+      text-transform: uppercase;
+      text-align: left;
+      margin-bottom: 50px;
+      width: 100%;
     }
   }
 
@@ -41,15 +39,55 @@
     @include font-size-paragraph;
     line-height: 2.5rem;
     font-weight: 200;
-    color: $font-secondary;
 
     &--bold {
       font-weight: 400;
-      color: $font-link;
       text-decoration: none;
     }
     @include adaptTo("not-mobile") {
       line-height: 2.5rem;
+    }
+  }
+}
+
+// Dark Theme
+.dark {
+  @import "../../utilities/variables-dark";
+
+  .about-card {
+    &__header {
+      color: $font-secondary;
+      @include adaptTo("not-mobile") {
+        border-bottom: solid 1px $border-box1;
+      }
+    }
+
+    &__text {
+      color: $font-secondary;
+      &--bold {
+        color: $font-link;
+      }
+    }
+  }
+}
+
+// Light Theme
+.light {
+  @import "../../utilities/variables-light";
+
+  .about-card {
+    &__header {
+      color: $font-secondary;
+      @include adaptTo("not-mobile") {
+        border-bottom: solid 1px $border-box1;
+      }
+    }
+
+    &__text {
+      color: $font-secondary;
+      &--bold {
+        color: $font-link;
+      }
     }
   }
 }

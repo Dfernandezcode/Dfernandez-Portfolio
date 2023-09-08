@@ -1,34 +1,84 @@
+// Main styles and mixins
 @import "../../utilities/fonts";
-@import "../../utilities/variables";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/responsive-mixins";
 
 .footer {
   display: flex;
-  justify-content: space-around;
   gap: 25px;
-  width: 100vw;
   margin-top: 50px;
   padding: 20px 0;
-  border-top: solid 1px $border-box1;
-  
-  
+  width: 100%;
+
   @include adaptTo("not-mobile") {
-    justify-content: flex-end;
+    justify-content: flex-start;
     position: absolute;
-    width: 95vw;
     margin-top: 0;
     padding: 0;
     border-top: none;
-    bottom: 0;
+    bottom: 5%;
+    left: 3%;
   }
 
-  &__text {
-    @include font-size-footer;
-    color: $font-secondary;
-    font-weight: 400;
-    line-height: 1.5rem;
-    text-align: right;
-    margin: 0;
+  &__theme {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    background-color: transparent;
+    cursor: pointer;
+
+
+    &--toggle {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+    @include font-size-theme;
+
+      .footer__theme--checkbox {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+// Theme specific styles
+@import "../../utilities/variables-light";
+.light {
+  .footer__theme--toggle {
+    color: $font-main;
+
+    .footer__theme--checkbox {
+      border: 1px solid $border-box2;
+      background-color: transparent;
+
+      &:checked {
+        background-color: $button-fill;
+      }
+    }
+  }
+}
+
+@import "../../utilities/variables-dark";
+.dark {
+  .footer__theme--toggle {
+    color: $font-main;
+
+    .footer__theme--checkbox {
+      border: 1px solid $border-box2;
+      background-color: transparent;
+
+      &:checked {
+        background-color: $button-fill;
+      }
+    }
   }
 }

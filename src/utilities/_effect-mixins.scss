@@ -1,11 +1,15 @@
+@import "variables-dark";
+@import "variables-light";
+
 @mixin spriteEffect {
   position: relative;
+  
   &::after {
     content: "";
     height: 70px;
     width: 1px;
     position: absolute;
-    left: -20px;
+    left: -30px;
     top: 50%;
     transition: top, opacity;
     transition-duration: 600ms;
@@ -15,13 +19,14 @@
   }
 
   &:hover::after {
-    top: 2%;
+    top: 5%;
     opacity: 1;
   }
 }
 
 @mixin spriteEffect-mid {
   position: relative;
+  
   &::after {
     content: "";
     height: 70px;

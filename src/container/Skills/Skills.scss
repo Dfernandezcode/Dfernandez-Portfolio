@@ -1,5 +1,3 @@
-@import "../../utilities/variables";
-@import "../../utilities/variables";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/responsive-mixins";
 @import "../../utilities/effect-mixins";
@@ -17,31 +15,28 @@
   }
 }
 
-
-// STACK SECTION
 .stack {
   &__section {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
-
     @include adaptTo("not-mobile") {
-    margin-bottom: 75px;
-    align-items: flex-start;
-    @include spriteEffect;
+      margin-bottom: 75px;
+      align-items: flex-start;
+      @include spriteEffect;
     }
   }
 
   &__header {
-      @include font-size-subheader;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-      border-bottom: solid 1px $border-box1;
-      width: 100%;
+    @include font-size-subheader;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    width: 100%;
   }
 
-  &__icons{
+  &__icons {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
@@ -49,28 +44,22 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
-          &-logo {
-            width: 40px;
-            @include adaptTo("not-mobile") {
-              width: 50px;
-            }
-          }
-          
+    &-logo {
+      width: 40px;
       @include adaptTo("not-mobile") {
-          grid-template-columns: repeat(4, 1fr);
+        width: 50px;
       }
-
-      
+    }
+    @include adaptTo("not-mobile") {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
-
 }
 
-// LANGUAGES SECTION
 .languages {
-  
-    &__section {
-      margin-bottom: 50px;
-      @include adaptTo("not-mobile") {
+  &__section {
+    margin-bottom: 50px;
+    @include adaptTo("not-mobile") {
       @include spriteEffect;
     }
   }
@@ -79,16 +68,20 @@
     @include font-size-subheader;
     text-transform: uppercase;
   }
+
+  &__proficiency {
+    @include font-size-paragraph;
+    font-style: italic;
+    font-weight: 200;
+  }
   &__spoken {
     @include font-size-paragraph;
   }
-
 }
-// EDUCATION SECTION
+
 .education {
-  
   &__section {
-    @include adaptTo ("not-mobile") {    
+    @include adaptTo("not-mobile") {
       min-width: 60%;
       max-width: 75%;
       margin-left: 50px;
@@ -105,21 +98,20 @@
     display: flex;
     margin-bottom: 10px;
     justify-content: space-between;
-    @include adaptTo ("not-mobile") { 
+    @include adaptTo("not-mobile") {
       justify-content: space-between;
-     }
+    }
   }
 
   &__wrapper {
     margin-bottom: 25px;
-    @include adaptTo ("not-mobile") {  
-    margin-bottom: 50px;
+    @include adaptTo("not-mobile") {
+      margin-bottom: 50px;
     }
   }
 
   &__dates {
     @include font-size-paragraph;
-    color: $font-date;
     margin: 0;
   }
 
@@ -127,5 +119,45 @@
     opacity: 0.5;
     @include font-size-paragraph;
     margin: 10px 0;
+  }
+}
+
+.dark {
+  @import "../../utilities/variables-dark";
+
+  .stack {
+    &__header {
+      color: $font-main;
+      border-bottom: solid 1px $border-box1;
+    }
+  }
+
+  .education {
+    &__dates {
+      color: $font-date;
+    }
+    &__description {
+      color: $font-secondary;
+    }
+  }
+}
+
+.light {
+  @import "../../utilities/variables-light";
+
+  .stack {
+    &__header {
+      color: $font-main;
+      border-bottom: solid 1px $border-box1;
+    }
+  }
+
+  .education {
+    &__dates {
+      color: $font-date;
+    }
+    &__description {
+      color: $font-secondary;
+    }
   }
 }

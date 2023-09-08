@@ -1,5 +1,4 @@
 @import "../../utilities/fonts";
-@import "../../utilities/variables";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/responsive-mixins";
 
@@ -22,7 +21,7 @@
     padding: 0;
     margin: 0 25px;
     @include adaptTo("not-mobile") {
-    margin: 0;
+      margin: 0;
     }
     
     @include adaptTo("not-mobile") {
@@ -37,6 +36,38 @@
     &--link {
       color: white;
       text-decoration: none;
+    }
+  }
+}
+
+// Dark Theme
+.dark {
+  @import "../../utilities/variables-dark";
+
+  .nav {
+    &__list {
+      color: $font-secondary;
+
+
+      &--link {
+        color: $font-main;
+      }
+    }
+  }
+}
+
+// Light Theme
+.light {
+  @import "../../utilities/variables-light";
+
+  .nav {
+    &__list {
+      color: $font-secondary;
+
+
+      &--link {
+        color: $font-main;
+      }
     }
   }
 }

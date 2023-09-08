@@ -1,27 +1,45 @@
 @import "./utilities/fonts";
-@import "./utilities/variables";
 @import "./utilities/layout-mixins";
 @import "./utilities/responsive-mixins";
+@import "./utilities/variables-dark";
 
+* {
+  transition: all 1s ease;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Inter";
+  font-weight: 400;
+
+  @include adaptTo("not-mobile") {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .footer {
   flex-shrink: 0;
 }
 
 .App {
+
   @include adaptTo("not-mobile") {
     &__wrapper {
       display: flex;
-      border: solid 1px $border-box1;
-      width: 95vw;
-      height: 90vh;
-      background-image: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%);
-      background-position: 0% 0%;
-      background-size: 2vmin 2vmin;
+      height: 93vh;
+      width: 96vw;
     }
 
     &__left-side {
-      
       @include adaptTo("not-mobile") {
         display: block;
         width: 25%;
@@ -47,8 +65,42 @@
 
 .card-motion-wrapper {
   @include flex-center;
+
   @include adaptTo("not-mobile") {
     align-items: flex-start;
     justify-content: flex-start;
+  }
+}
+
+.dark {
+  @import "./utilities/variables-dark";
+
+  .App {
+    &__wrapper {
+      background-color: $background-base;
+      background-image: radial-gradient(rgba(180, 180, 180, 0.2) 8%, transparent 8%);
+      background-position: 0% 0%;
+      background-size: 2vmin 2vmin;
+      border: solid 1px $border-box1;
+      box-shadow:
+        0 0 0 55px #0a0a0a, 
+        0 0 0 105px #0a0a0a;
+      color: $font-main;
+    }
+  }
+}
+
+.light {
+  @import "./utilities/variables-light";
+
+  .App {
+    &__wrapper {
+      background-color: $background-base;
+      border: solid 1px $border-box1;
+      background-image: radial-gradient(rgba(10, 10, 10, 0.8) 5%, transparent 5%);
+      background-position: 0% 0%;
+      background-size: 2vmin 2vmin;
+      color: $font-main;
+    }
   }
 }

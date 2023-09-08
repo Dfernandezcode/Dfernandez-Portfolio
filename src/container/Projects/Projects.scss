@@ -1,5 +1,4 @@
-@import "../../utilities/variables";
-@import "../../utilities/variables";
+@import "../../utilities/fonts";
 @import "../../utilities/layout-mixins";
 @import "../../utilities/responsive-mixins";
 @import "../../utilities/effect-mixins";
@@ -20,20 +19,21 @@
     @include font-size-subheader;
     text-transform: uppercase;
     text-align: left;
+    padding-bottom: 10px;
     margin-bottom: 50px;
-    border-bottom: solid 1px $border-box1;
+    width: 85%;
   }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     @include adaptTo("not-mobile") {
-    display: grid;
-    grid-template-columns: repeat(2, 1.5fr); 
-    grid-template-rows: repeat(1, 1fr); 
-    gap: 30px 20px;
-    flex-wrap: wrap;
-    margin-right: 50px;
+      display: grid;
+      grid-template-columns: repeat(2, 1.5fr);
+      grid-template-rows: repeat(1, 1fr);
+      gap: 30px 20px;
+      flex-wrap: wrap;
+      margin-right: 50px;
     }
   }
 
@@ -50,13 +50,11 @@
     &--title {
       @include font-size-subheader;
       font-weight: 700;
-      color: $font-main;
       margin: 0;
     }
 
     &--text {
       @include font-size-paragraph;
-      color: $font-secondary;
       font-weight: 400;
       line-height: 1.5rem;
       width: 85%;
@@ -64,17 +62,15 @@
 
     &--link {
       text-decoration: none;
-      color: $font-link;
     }
 
     &--mini {
       @include font-size-paragraph;
-      color: $font-secondary;
       font-weight: 400;
       margin: 0;
       padding: 0;
       line-height: 1.5rem;
-      list-style-type: none
+      list-style-type: none;
     }
   }
 
@@ -92,7 +88,6 @@
   &__item {
     width: fit-content;
     font-weight: 400;
-    border: solid 1px $border-sprite;
     border-radius: 5px;
     padding: 5px 10px;
     margin: 5px 0;
@@ -100,8 +95,75 @@
     opacity: 0.6;
   }
 
-  &__item:hover{
+  &__item:hover {
     opacity: 1;
     transition: 0.3s;
+  }
+}
+
+// Dark Theme
+.dark {
+  @import "../../utilities/variables-dark";
+
+  .projects {
+    &__header {
+      color: $font-main;
+      border-bottom: solid 1px $border-box1;
+    }
+
+    &__card {
+      &--title {
+        color: $font-main;
+      }
+
+      &--text, &--mini {
+        color: $font-secondary;
+      }
+
+      &--link {
+        color: $font-link;
+      }
+    }
+  }
+
+  .techbox {
+    &__item {
+      color: $font-main;
+      border: solid 1px $border-box1;
+    }
+  }
+}
+
+// Light Theme
+.light {
+  @import "../../utilities/variables-light";
+
+  // Assuming the light theme styles are similar to the dark
+  .projects {
+    &__header {
+      color: $font-main;
+      border-bottom: solid 1px $border-box1;
+    }
+
+    &__card {
+      &--title {
+        color: $font-main;
+      }
+
+      &--text, &--mini {
+        color: $font-secondary;
+      }
+
+      &--link {
+        color: $font-link;
+      }
+    }
+  }
+
+  .techbox {
+    &__item {
+      color: $font-main;
+      border: solid 1px $border-box1;
+    }
   }
 }
