@@ -13,8 +13,8 @@ const Projects = () => {
         <RickMorty_Project />
         <Project_Games />
         <Project_Tmdb />
-        <Project_Nailted />
         <Project_Mini />
+        <Project_Nailted />
       </div>
     </div>
   );

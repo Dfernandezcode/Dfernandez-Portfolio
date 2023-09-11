@@ -39,6 +39,11 @@
   }
 }
 
+@mixin font-size-disclaimer {
+  font-size: 12px;
+  line-height: 1rem;
+}
+
 @mixin font-size-theme {
   font-size: clamp(12px, 14px, 16px);
 }

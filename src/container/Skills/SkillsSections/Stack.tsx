@@ -10,7 +10,7 @@ import icon_Postman from "../../../assets/images/techstack-icons/icon_Postman.sv
 import icon_Figma from "../../../assets/images/techstack-icons/icon_Figma.svg";
 import icon_PS from "../../../assets/images/techstack-icons/icon_PS.svg";
 import icon_Docker from "../../../assets/images/techstack-icons/icon_Docker.svg";
-import "../Skills.scss"
+import "../Skills.scss";
 
 const Stack = () => {
   return (
@@ -26,17 +26,14 @@ const Stack = () => {
         <img className="stack__icons-logo" src={icon_ViteJS} alt="ViteJS" />
         <img className="stack__icons-logo" src={icon_Sass} alt="Sass" />
         <img className="stack__icons-logo" src={icon_NodeJS} alt="NodeJS" />
-        <img
-          className="stack__icons-logo"
-          src={icon_Postman}
-          alt="Postman"
-        />
+        <img className="stack__icons-logo" src={icon_Postman} alt="Postman" />
         <img className="stack__icons-logo" src={icon_Figma} alt="Figma" />
         <img className="stack__icons-logo" src={icon_PS} alt="Photoshop" />
-        <img className="stack__icons-logo" src={icon_Docker} alt="Docker" />
       </div>
     </section>
   );
 };
 
 export default Stack;
+
+// <img className="stack__icons-logo" src={icon_Docker} alt="Docker" />

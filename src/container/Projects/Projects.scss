@@ -59,6 +59,13 @@
       width: 85%;
     }
 
+    &--disclaimer {
+      @include font-size-disclaimer;
+
+      opacity: 0.8;
+      width: 300px;
+    }
+
     &--link {
       text-decoration: none;
     }

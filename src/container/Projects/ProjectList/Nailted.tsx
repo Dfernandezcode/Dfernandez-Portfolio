@@ -16,6 +16,14 @@ const Project_Nailted = () => {
         with React and supporting technologies.
       </p>
 
+      <p className="projects__card--disclaimer">
+        * Please give it some time to load. Free via{" "}
+        <a className="projects__card--link" href="https://render.com/" target="_blank" rel="noopener noreferrer">
+          Render↗
+        </a>{" "}
+        causes the load time to be...less than optimal.
+      </p>
+
       <div className="techbox">
         <p className="techbox__item">React</p>
         <p className="techbox__item">HTML</p>
