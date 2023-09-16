@@ -9,7 +9,7 @@ import icon_NodeJS from "../../../assets/images/techstack-icons/icon_NodeJS.svg"
 import icon_Postman from "../../../assets/images/techstack-icons/icon_Postman.svg";
 import icon_Figma from "../../../assets/images/techstack-icons/icon_Figma.svg";
 import icon_PS from "../../../assets/images/techstack-icons/icon_PS.svg";
-import icon_Docker from "../../../assets/images/techstack-icons/icon_Docker.svg";
+// import icon_Docker from "../../../assets/images/techstack-icons/icon_Docker.svg";
 import "../Skills.scss";
 
 const Stack = () => {
