@@ -23,6 +23,11 @@ const ProjectMini = () => {
               Simple Weather App ↗
             </a>
           </li>
+          <li>
+            <a className="projects__card--link" href="https://dfernandezcode.github.io/JS-miniProjects/" target="_blank" rel="noopener noreferrer">
+              Mix of Simple Apps ↗
+            </a>
+          </li>
         </ul>
       </div>
     </div>
